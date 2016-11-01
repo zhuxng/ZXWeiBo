@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		393C1A771DC8C865008C46FA /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C1A761DC8C865008C46FA /* MyViewController.swift */; };
 		39B37DA21DC8B98000202E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DA11DC8B98000202E2A /* AppDelegate.swift */; };
 		39B37DA41DC8B98000202E2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DA31DC8B98000202E2A /* ViewController.swift */; };
 		39B37DA71DC8B98000202E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B37DA51DC8B98000202E2A /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		393C1A761DC8C865008C46FA /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		39B37D9E1DC8B98000202E2A /* ZXWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B37DA11DC8B98000202E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39B37DA31DC8B98000202E2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				39B37DA11DC8B98000202E2A /* AppDelegate.swift */,
 				39B37DA31DC8B98000202E2A /* ViewController.swift */,
+				393C1A761DC8C865008C46FA /* MyViewController.swift */,
 				39B37DA51DC8B98000202E2A /* Main.storyboard */,
 				39B37DA81DC8B98000202E2A /* Assets.xcassets */,
 				39B37DAA1DC8B98000202E2A /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39B37DA41DC8B98000202E2A /* ViewController.swift in Sources */,
+				393C1A771DC8C865008C46FA /* MyViewController.swift in Sources */,
 				39B37DA21DC8B98000202E2A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +518,7 @@
 				39B37DC81DC8B98000202E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39B37DC91DC8B98000202E2A /* Build configuration list for PBXNativeTarget "ZXWeiBoTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +527,7 @@
 				39B37DCB1DC8B98000202E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39B37DCC1DC8B98000202E2A /* Build configuration list for PBXNativeTarget "ZXWeiBoUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +536,7 @@
 				39B37DCE1DC8B98000202E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
