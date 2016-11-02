@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3914998B1DC9A70C00E8E22A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914998A1DC9A70C00E8E22A /* MainViewController.swift */; };
+		391499951DC9A74E00E8E22A /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391499941DC9A74E00E8E22A /* HomeTableViewController.swift */; };
+		391499971DC9A76C00E8E22A /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391499961DC9A76C00E8E22A /* DiscoverTableViewController.swift */; };
+		391499991DC9A77800E8E22A /* ComposeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391499981DC9A77800E8E22A /* ComposeTableViewController.swift */; };
+		3914999B1DC9A78B00E8E22A /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914999A1DC9A78B00E8E22A /* MessageTableViewController.swift */; };
+		3914999D1DC9A79700E8E22A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914999C1DC9A79700E8E22A /* ProfileTableViewController.swift */; };
 		39B37DA21DC8B98000202E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DA11DC8B98000202E2A /* AppDelegate.swift */; };
-		39B37DA41DC8B98000202E2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DA31DC8B98000202E2A /* ViewController.swift */; };
-		39B37DA71DC8B98000202E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B37DA51DC8B98000202E2A /* Main.storyboard */; };
 		39B37DA91DC8B98000202E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B37DA81DC8B98000202E2A /* Assets.xcassets */; };
 		39B37DAC1DC8B98000202E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B37DAA1DC8B98000202E2A /* LaunchScreen.storyboard */; };
 		39B37DB71DC8B98000202E2A /* ZXWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DB61DC8B98000202E2A /* ZXWeiBoTests.swift */; };
@@ -39,10 +43,14 @@
 /* Begin PBXFileReference section */
 		29ACEAF90809D689C4087E43 /* Pods-ZXWeiBoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXWeiBoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXWeiBoTests/Pods-ZXWeiBoTests.release.xcconfig"; sourceTree = "<group>"; };
 		35B9F3A837A7E28E11320DB8 /* Pods-ZXWeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXWeiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXWeiBo/Pods-ZXWeiBo.release.xcconfig"; sourceTree = "<group>"; };
+		3914998A1DC9A70C00E8E22A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../../MainViewController.swift; sourceTree = "<group>"; };
+		391499941DC9A74E00E8E22A /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		391499961DC9A76C00E8E22A /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		391499981DC9A77800E8E22A /* ComposeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTableViewController.swift; sourceTree = "<group>"; };
+		3914999A1DC9A78B00E8E22A /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		3914999C1DC9A79700E8E22A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		39B37D9E1DC8B98000202E2A /* 星哥微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "星哥微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B37DA11DC8B98000202E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39B37DA31DC8B98000202E2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		39B37DA61DC8B98000202E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39B37DA81DC8B98000202E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39B37DAB1DC8B98000202E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39B37DAD1DC8B98000202E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +97,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3914998C1DC9A72D00E8E22A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3914998D1DC9A72D00E8E22A /* Compose */,
+				3914998E1DC9A72D00E8E22A /* Discover */,
+				3914998F1DC9A72D00E8E22A /* Home */,
+				391499901DC9A72D00E8E22A /* Main */,
+				391499911DC9A72D00E8E22A /* Message */,
+				391499921DC9A72D00E8E22A /* Profile */,
+				391499931DC9A72D00E8E22A /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3914998D1DC9A72D00E8E22A /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				391499981DC9A77800E8E22A /* ComposeTableViewController.swift */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		3914998E1DC9A72D00E8E22A /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				391499961DC9A76C00E8E22A /* DiscoverTableViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		3914998F1DC9A72D00E8E22A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				391499941DC9A74E00E8E22A /* HomeTableViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		391499901DC9A72D00E8E22A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3914998A1DC9A70C00E8E22A /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		391499911DC9A72D00E8E22A /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				3914999A1DC9A78B00E8E22A /* MessageTableViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		391499921DC9A72D00E8E22A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3914999C1DC9A79700E8E22A /* ProfileTableViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		391499931DC9A72D00E8E22A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		39B37D951DC8B98000202E2A = {
 			isa = PBXGroup;
 			children = (
@@ -114,10 +191,9 @@
 		39B37DA01DC8B98000202E2A /* ZXWeiBo */ = {
 			isa = PBXGroup;
 			children = (
-				39B37DA11DC8B98000202E2A /* AppDelegate.swift */,
-				39B37DA31DC8B98000202E2A /* ViewController.swift */,
-				39B37DA51DC8B98000202E2A /* Main.storyboard */,
+				3914998C1DC9A72D00E8E22A /* Classes */,
 				39B37DA81DC8B98000202E2A /* Assets.xcassets */,
+				39B37DA11DC8B98000202E2A /* AppDelegate.swift */,
 				39B37DAA1DC8B98000202E2A /* LaunchScreen.storyboard */,
 				39B37DAD1DC8B98000202E2A /* Info.plist */,
 			);
@@ -286,7 +362,6 @@
 			files = (
 				39B37DAC1DC8B98000202E2A /* LaunchScreen.storyboard in Resources */,
 				39B37DA91DC8B98000202E2A /* Assets.xcassets in Resources */,
-				39B37DA71DC8B98000202E2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		58AC127F32C68BA8F094A4E3 /* [CP] Check Pods Manifest.lock */ = {
@@ -394,7 +469,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		867DC2142A3BC7EC54597CDB /* [CP] Check Pods Manifest.lock */ = {
@@ -409,7 +484,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8D292EB02680002C49A801C1 /* [CP] Embed Pods Frameworks */ = {
@@ -449,8 +524,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39B37DA41DC8B98000202E2A /* ViewController.swift in Sources */,
+				3914999D1DC9A79700E8E22A /* ProfileTableViewController.swift in Sources */,
+				391499951DC9A74E00E8E22A /* HomeTableViewController.swift in Sources */,
 				39B37DA21DC8B98000202E2A /* AppDelegate.swift in Sources */,
+				391499971DC9A76C00E8E22A /* DiscoverTableViewController.swift in Sources */,
+				3914998B1DC9A70C00E8E22A /* MainViewController.swift in Sources */,
+				3914999B1DC9A78B00E8E22A /* MessageTableViewController.swift in Sources */,
+				391499991DC9A77800E8E22A /* ComposeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,14 +566,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		39B37DA51DC8B98000202E2A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				39B37DA61DC8B98000202E2A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		39B37DAA1DC8B98000202E2A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
