@@ -9,25 +9,24 @@
 import UIKit
 
 class MainViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tabBar.tintColor = UIColor.orange
         self.addChildViewControllers()
-    
+        
+        
         
     }
-//    func addChildViewControllers()
-//    {
-//
-//        addChildViewController(HomeTableViewController(), title: "首页", imageName: "tabbar_home")
-//        addChildViewController(MessageTableViewController(), title: "消息", imageName: "tabbar_message_center")
-//        addChildViewController(DiscoverTableViewController(), title: "发现", imageName: "tabbar_discover")
-//        addChildViewController(ProfileTableViewController(), title: "我的", imageName: "tabbar_profile")
-//        
-//    }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBar.addSubview(composeButton)
+        let rect = composeButton.frame
+        let width = tabBar.bounds.width / CGFloat(childViewControllers.count)
+        composeButton.frame = CGRect(x: 2 * width, y: 0, width: width, height: rect.height)
+    }
+    //MARK: - 内部控制器
     func addChildViewControllers()
     {
         
@@ -48,22 +47,10 @@ class MainViewController: UITabBarController {
         // 1.2将JSON数据转换为对象(数组字典)
         do
         {
-            /*
-             Swift和OC不太一样, OC中一般情况如果发生错误会给传入的指针赋值, 而在Swift中使用的是异常处理机制
-             1.以后但凡看大 throws的方法, 那么就必须进行 try处理, 而只要看到try, 就需要写上do catch
-             2.do{}catch{}, 只有do中的代码发生了错误, 才会执行catch{}中的代码
-             3. try  正常处理异常, 也就是通过do catch来处理
-             try! 告诉系统一定不会有异常, 也就是说可以不通过 do catch来处理
-             但是需要注意, 开发中不推荐这样写, 一旦发生异常程序就会崩溃
-             如果没有异常那么会返回一个确定的值给我们
-             
-             try? 告诉系统可能有错也可能没错, 如果没有系统会自动将结果包装成一个可选类型给我们, 如果有错系统会返回nil, 如果使用try? 那么可以不通过do catch来处理
-             */
-            
-            let objc = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String: AnyObject]]
-            
+            //            let objc = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String: AnyObject]]
+            let dic = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String: AnyObject]]
             // 1.3遍历数组字典取出每一个字典
-            for dict in objc
+            for dict in dic
             {
                 // 1.4根据遍历到的字典创建控制器
                 let title = dict["title"] as? String
@@ -76,14 +63,12 @@ class MainViewController: UITabBarController {
             // 只要try对应的方法发生了异常, 就会执行catch{}中的代码
             addChildViewController("HomeTableViewController", title: "首页", imageName: "tabbar_home")
             addChildViewController("MessageTableViewController", title: "消息", imageName: "tabbar_message_center")
+            addChildViewController("NullViewController", title: "", imageName: "")
             addChildViewController("DiscoverTableViewController", title: "发现", imageName: "tabbar_discover")
             addChildViewController("ProfileTableViewController", title: "我", imageName: "tabbar_profile")
         }
     }
-    
-    
-    
-    func addChildViewController(_ childControllerName: String, title: String, imageName: String)
+    func addChildViewController(_ childControllerName: String!, title: String, imageName: String)
     {
         // 1.动态获取命名空间
         guard let name =  Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else
@@ -94,9 +79,9 @@ class MainViewController: UITabBarController {
         
         // 2.根据字符串获取Class
         var cls: AnyClass? = nil
-        if let vcName: String = childControllerName
+        if let vcName: String? = childControllerName
         {
-            cls = NSClassFromString(name + "." + vcName)
+            cls = NSClassFromString(name + "." + vcName!)
         }
         
         // 3.根据Class创建对象
@@ -115,11 +100,34 @@ class MainViewController: UITabBarController {
         childController.title = title
         childController.tabBarItem.image = UIImage(named: imageName)
         childController.tabBarItem.selectedImage = UIImage(named: imageName + "_highlighted")
-   //包装导航条
+        //包装导航条
         let nav = UINavigationController(rootViewController: childController)
         
         self.addChildViewController(nav)
         
         
     }
+    
+    //MARK: - 懒加载
+    lazy var composeButton: UIButton = {
+        () -> UIButton
+        in
+        //1、创建按钮
+        let btn = UIButton()
+        //2、设置当前图片
+        btn.setImage(UIImage.init(named: "tabbar_compose_icon_add"), for: .normal)
+        //3、设置背景图片
+        btn.setImage(UIImage.init(named: "tabbar_compose_icon_add_highlighted"), for: .highlighted)
+        btn.setBackgroundImage(UIImage.init(named: "tabbar_compose_button"), for: .normal)
+        btn.setBackgroundImage(UIImage.init(named: "tabbar_compose_button_highlighted"), for: .highlighted)
+        btn.addTarget(self, action: #selector(MainViewController.composeButonClick), for: .touchUpInside)
+        //4、设置frame
+        btn.sizeToFit()
+        return btn
+    }()
+    func composeButonClick(btn: UIButton){
+        ZXLog(message: btn)
+    }
+    
+    
 }
