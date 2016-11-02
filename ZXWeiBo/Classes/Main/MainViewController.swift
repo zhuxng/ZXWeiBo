@@ -98,14 +98,13 @@ class MainViewController: UITabBarController {
          childController.title = title该句代码相当于childController.navigationItem.title = title childController.tabBarItem.title = title
          */
         childController.title = title
+        
         childController.tabBarItem.image = UIImage(named: imageName)
         childController.tabBarItem.selectedImage = UIImage(named: imageName + "_highlighted")
         //包装导航条
         let nav = UINavigationController(rootViewController: childController)
-        
         self.addChildViewController(nav)
-        
-        
+   
     }
     
     //MARK: - 懒加载
