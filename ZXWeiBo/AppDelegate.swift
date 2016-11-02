@@ -29,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        print(#file)
 //        print(#function)
 //        print(#line)
-        ZXLog(message: "zhuxing")
         return true
     }
 }

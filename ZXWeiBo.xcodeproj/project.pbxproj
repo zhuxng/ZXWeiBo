@@ -15,6 +15,7 @@
 		3914999F1DC9BA7600E8E22A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914999E1DC9BA7600E8E22A /* MainViewController.swift */; };
 		391499A31DC9BECF00E8E22A /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 391499A11DC9BECF00E8E22A /* MainVCSettings.json */; };
 		391499A41DC9BECF00E8E22A /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391499A21DC9BECF00E8E22A /* NullViewController.swift */; };
+		391499A61DC9E54500E8E22A /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391499A51DC9E54500E8E22A /* UIButton + Extension.swift */; };
 		39B37DA21DC8B98000202E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DA11DC8B98000202E2A /* AppDelegate.swift */; };
 		39B37DA91DC8B98000202E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B37DA81DC8B98000202E2A /* Assets.xcassets */; };
 		39B37DAC1DC8B98000202E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B37DAA1DC8B98000202E2A /* LaunchScreen.storyboard */; };
@@ -53,6 +54,7 @@
 		3914999E1DC9BA7600E8E22A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		391499A11DC9BECF00E8E22A /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		391499A21DC9BECF00E8E22A /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
+		391499A51DC9E54500E8E22A /* UIButton + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		39B37D9E1DC8B98000202E2A /* ZXWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B37DA11DC8B98000202E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39B37DA81DC8B98000202E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		391499931DC9A72D00E8E22A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				391499A51DC9E54500E8E22A /* UIButton + Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				39B37DA21DC8B98000202E2A /* AppDelegate.swift in Sources */,
 				391499971DC9A76C00E8E22A /* DiscoverTableViewController.swift in Sources */,
 				3914999B1DC9A78B00E8E22A /* MessageTableViewController.swift in Sources */,
+				391499A61DC9E54500E8E22A /* UIButton + Extension.swift in Sources */,
 				391499A41DC9BECF00E8E22A /* NullViewController.swift in Sources */,
 				391499991DC9A77800E8E22A /* ComposeTableViewController.swift in Sources */,
 				3914999F1DC9BA7600E8E22A /* MainViewController.swift in Sources */,

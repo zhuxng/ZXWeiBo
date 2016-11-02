@@ -113,6 +113,7 @@ class MainViewController: UITabBarController {
         () -> UIButton
         in
         //1、创建按钮
+        /*
         let btn = UIButton()
         //2、设置当前图片
         btn.setImage(UIImage.init(named: "tabbar_compose_icon_add"), for: .normal)
@@ -120,9 +121,15 @@ class MainViewController: UITabBarController {
         btn.setImage(UIImage.init(named: "tabbar_compose_icon_add_highlighted"), for: .highlighted)
         btn.setBackgroundImage(UIImage.init(named: "tabbar_compose_button"), for: .normal)
         btn.setBackgroundImage(UIImage.init(named: "tabbar_compose_button_highlighted"), for: .highlighted)
+          btn.sizeToFit()
+        */
+//        let btn = UIButton()
+//        btn.createButton(imageName: "tabbar_compose_icon_add", backgroundImage: "tabbar_compose_button")
+        
+        let btn = UIButton(imageName: "tabbar_compose_icon_add", backgroundImage: "tabbar_compose_button")
         btn.addTarget(self, action: #selector(MainViewController.composeButonClick), for: .touchUpInside)
         //4、设置frame
-        btn.sizeToFit()
+       
         return btn
     }()
     func composeButonClick(btn: UIButton){
@@ -131,3 +138,15 @@ class MainViewController: UITabBarController {
     
     
 }
+//extension UIButton
+//{
+//      func createButton(imageName: String,backgroundImage: String) {
+//       
+//        setImage(UIImage.init(named: imageName), for: .normal)
+//        setImage(UIImage.init(named: imageName + "_highlighted"), for: .highlighted)
+//        setBackgroundImage(UIImage.init(named: backgroundImage), for: .normal)
+//        setBackgroundImage(UIImage.init(named: backgroundImage + "_highlighted"), for: .highlighted)
+//        sizeToFit()
+//    }
+//    
+//}
