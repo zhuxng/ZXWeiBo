@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "39B37D9D1DC8B98000202E2A"
-               BuildableName = "&#x661f;&#x54e5;&#x5fae;&#x535a;.app"
+               BuildableName = "ZXWeiBo.app"
                BlueprintName = "ZXWeiBo"
                ReferencedContainer = "container:ZXWeiBo.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "39B37D9D1DC8B98000202E2A"
-            BuildableName = "&#x661f;&#x54e5;&#x5fae;&#x535a;.app"
+            BuildableName = "ZXWeiBo.app"
             BlueprintName = "ZXWeiBo"
             ReferencedContainer = "container:ZXWeiBo.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "39B37D9D1DC8B98000202E2A"
-            BuildableName = "&#x661f;&#x54e5;&#x5fae;&#x535a;.app"
+            BuildableName = "ZXWeiBo.app"
             BlueprintName = "ZXWeiBo"
             ReferencedContainer = "container:ZXWeiBo.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "39B37D9D1DC8B98000202E2A"
-            BuildableName = "&#x661f;&#x54e5;&#x5fae;&#x535a;.app"
+            BuildableName = "ZXWeiBo.app"
             BlueprintName = "ZXWeiBo"
             ReferencedContainer = "container:ZXWeiBo.xcodeproj">
          </BuildableReference>
