@@ -34,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		39B37D9E1DC8B98000202E2A /* ZXWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39B37D9E1DC8B98000202E2A /* 星哥微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "星哥微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B37DA11DC8B98000202E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39B37DA31DC8B98000202E2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39B37DA61DC8B98000202E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		39B37D9F1DC8B98000202E2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				39B37D9E1DC8B98000202E2A /* ZXWeiBo.app */,
+				39B37D9E1DC8B98000202E2A /* 星哥微博.app */,
 				39B37DB21DC8B98000202E2A /* ZXWeiBoTests.xctest */,
 				39B37DBD1DC8B98000202E2A /* ZXWeiBoUITests.xctest */,
 			);
@@ -142,7 +142,7 @@
 			);
 			name = ZXWeiBo;
 			productName = ZXWeiBo;
-			productReference = 39B37D9E1DC8B98000202E2A /* ZXWeiBo.app */;
+			productReference = 39B37D9E1DC8B98000202E2A /* 星哥微博.app */;
 			productType = "com.apple.product-type.application";
 		};
 		39B37DB11DC8B98000202E2A /* ZXWeiBoTests */ = {
@@ -419,7 +419,7 @@
 				INFOPLIST_FILE = ZXWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuxing.ZXWeiBo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "星哥微博";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -432,7 +432,7 @@
 				INFOPLIST_FILE = ZXWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuxing.ZXWeiBo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "星哥微博";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
