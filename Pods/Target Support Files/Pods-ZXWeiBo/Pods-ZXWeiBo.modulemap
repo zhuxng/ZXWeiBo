@@ -1,0 +1,6 @@
+framework module Pods_ZXWeiBo {
+  umbrella header "Pods-ZXWeiBo-umbrella.h"
+
+  export *
+  module * { export * }
+}

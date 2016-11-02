@@ -14,6 +14,9 @@
 		39B37DAC1DC8B98000202E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B37DAA1DC8B98000202E2A /* LaunchScreen.storyboard */; };
 		39B37DB71DC8B98000202E2A /* ZXWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DB61DC8B98000202E2A /* ZXWeiBoTests.swift */; };
 		39B37DC21DC8B98000202E2A /* ZXWeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DC11DC8B98000202E2A /* ZXWeiBoUITests.swift */; };
+		C21A24D05658D1383A18E7A5 /* Pods_ZXWeiBoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A95B53D784F4368A7262181 /* Pods_ZXWeiBoTests.framework */; };
+		CF6450274C8DC1D5C016B2BC /* Pods_ZXWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8FAD73893343FA963BBA0E /* Pods_ZXWeiBo.framework */; };
+		F3419E47B1E798D544071AD0 /* Pods_ZXWeiBoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F22007A8E1A67029FF5DBB4 /* Pods_ZXWeiBoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29ACEAF90809D689C4087E43 /* Pods-ZXWeiBoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXWeiBoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXWeiBoTests/Pods-ZXWeiBoTests.release.xcconfig"; sourceTree = "<group>"; };
+		35B9F3A837A7E28E11320DB8 /* Pods-ZXWeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXWeiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXWeiBo/Pods-ZXWeiBo.release.xcconfig"; sourceTree = "<group>"; };
 		39B37D9E1DC8B98000202E2A /* 星哥微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "星哥微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B37DA11DC8B98000202E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39B37DA31DC8B98000202E2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		39B37DBD1DC8B98000202E2A /* ZXWeiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXWeiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B37DC11DC8B98000202E2A /* ZXWeiBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZXWeiBoUITests.swift; sourceTree = "<group>"; };
 		39B37DC31DC8B98000202E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EEC7FD2EFAE1B1CADCEB9C7 /* Pods-ZXWeiBoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXWeiBoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXWeiBoUITests/Pods-ZXWeiBoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F22007A8E1A67029FF5DBB4 /* Pods_ZXWeiBoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZXWeiBoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A95B53D784F4368A7262181 /* Pods_ZXWeiBoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZXWeiBoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB3CFCFAE2973C175BF2AA02 /* Pods-ZXWeiBoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXWeiBoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXWeiBoTests/Pods-ZXWeiBoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C67A0D91F10D5976E1C431D6 /* Pods-ZXWeiBoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXWeiBoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXWeiBoUITests/Pods-ZXWeiBoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CD5E6173C9C79E9718CC76EE /* Pods-ZXWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXWeiBo/Pods-ZXWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
+		ED8FAD73893343FA963BBA0E /* Pods_ZXWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZXWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6450274C8DC1D5C016B2BC /* Pods_ZXWeiBo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C21A24D05658D1383A18E7A5 /* Pods_ZXWeiBoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3419E47B1E798D544071AD0 /* Pods_ZXWeiBoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				39B37DB51DC8B98000202E2A /* ZXWeiBoTests */,
 				39B37DC01DC8B98000202E2A /* ZXWeiBoUITests */,
 				39B37D9F1DC8B98000202E2A /* Products */,
+				E49BAA8D9CAAC5FF55B5581B /* Pods */,
+				E1EF2FB13B428656F1DEA36E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = ZXWeiBoUITests;
 			sourceTree = "<group>";
 		};
+		E1EF2FB13B428656F1DEA36E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED8FAD73893343FA963BBA0E /* Pods_ZXWeiBo.framework */,
+				6A95B53D784F4368A7262181 /* Pods_ZXWeiBoTests.framework */,
+				4F22007A8E1A67029FF5DBB4 /* Pods_ZXWeiBoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E49BAA8D9CAAC5FF55B5581B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD5E6173C9C79E9718CC76EE /* Pods-ZXWeiBo.debug.xcconfig */,
+				35B9F3A837A7E28E11320DB8 /* Pods-ZXWeiBo.release.xcconfig */,
+				AB3CFCFAE2973C175BF2AA02 /* Pods-ZXWeiBoTests.debug.xcconfig */,
+				29ACEAF90809D689C4087E43 /* Pods-ZXWeiBoTests.release.xcconfig */,
+				3EEC7FD2EFAE1B1CADCEB9C7 /* Pods-ZXWeiBoUITests.debug.xcconfig */,
+				C67A0D91F10D5976E1C431D6 /* Pods-ZXWeiBoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39B37DC61DC8B98000202E2A /* Build configuration list for PBXNativeTarget "ZXWeiBo" */;
 			buildPhases = (
+				58AC127F32C68BA8F094A4E3 /* [CP] Check Pods Manifest.lock */,
 				39B37D9A1DC8B98000202E2A /* Sources */,
 				39B37D9B1DC8B98000202E2A /* Frameworks */,
 				39B37D9C1DC8B98000202E2A /* Resources */,
+				8D292EB02680002C49A801C1 /* [CP] Embed Pods Frameworks */,
+				3ABA38359A1509511F9900FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39B37DC91DC8B98000202E2A /* Build configuration list for PBXNativeTarget "ZXWeiBoTests" */;
 			buildPhases = (
+				867DC2142A3BC7EC54597CDB /* [CP] Check Pods Manifest.lock */,
 				39B37DAE1DC8B98000202E2A /* Sources */,
 				39B37DAF1DC8B98000202E2A /* Frameworks */,
 				39B37DB01DC8B98000202E2A /* Resources */,
+				33C3061240F2A3DDABC42227 /* [CP] Embed Pods Frameworks */,
+				CA15F4B2DF8794B098D7388D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39B37DCC1DC8B98000202E2A /* Build configuration list for PBXNativeTarget "ZXWeiBoUITests" */;
 			buildPhases = (
+				487620BC8F53C68B885B9B8F /* [CP] Check Pods Manifest.lock */,
 				39B37DB91DC8B98000202E2A /* Sources */,
 				39B37DBA1DC8B98000202E2A /* Frameworks */,
 				39B37DBB1DC8B98000202E2A /* Resources */,
+				1C190AEECE4E5DB6D1A643D9 /* [CP] Embed Pods Frameworks */,
+				2529CAC677D3BA11069EB276 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C190AEECE4E5DB6D1A643D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXWeiBoUITests/Pods-ZXWeiBoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2529CAC677D3BA11069EB276 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXWeiBoUITests/Pods-ZXWeiBoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33C3061240F2A3DDABC42227 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXWeiBoTests/Pods-ZXWeiBoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3ABA38359A1509511F9900FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXWeiBo/Pods-ZXWeiBo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		487620BC8F53C68B885B9B8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		58AC127F32C68BA8F094A4E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		867DC2142A3BC7EC54597CDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D292EB02680002C49A801C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXWeiBo/Pods-ZXWeiBo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA15F4B2DF8794B098D7388D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXWeiBoTests/Pods-ZXWeiBoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		39B37D9A1DC8B98000202E2A /* Sources */ = {
@@ -413,6 +600,7 @@
 		};
 		39B37DC71DC8B98000202E2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD5E6173C9C79E9718CC76EE /* Pods-ZXWeiBo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KP2EZ9LGC6;
@@ -426,6 +614,7 @@
 		};
 		39B37DC81DC8B98000202E2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35B9F3A837A7E28E11320DB8 /* Pods-ZXWeiBo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KP2EZ9LGC6;
@@ -439,6 +628,7 @@
 		};
 		39B37DCA1DC8B98000202E2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3CFCFAE2973C175BF2AA02 /* Pods-ZXWeiBoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +644,7 @@
 		};
 		39B37DCB1DC8B98000202E2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29ACEAF90809D689C4087E43 /* Pods-ZXWeiBoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +660,7 @@
 		};
 		39B37DCD1DC8B98000202E2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EEC7FD2EFAE1B1CADCEB9C7 /* Pods-ZXWeiBoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = KP2EZ9LGC6;
@@ -483,6 +675,7 @@
 		};
 		39B37DCE1DC8B98000202E2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C67A0D91F10D5976E1C431D6 /* Pods-ZXWeiBoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = KP2EZ9LGC6;

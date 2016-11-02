@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import QorumLogs
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.green
 
+//        QorumLogs.onlyShowThisFile(ViewController.self)
+//        QorumLogs.minimumLogLevelShown = 1
+//        QL1("1111")
+//        QL2("222")
+//        QL3("333")
+//        QLPlusLine()
+//        QLShortLine()
     
     
     }
