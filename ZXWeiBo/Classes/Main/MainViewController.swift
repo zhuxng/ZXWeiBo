@@ -14,10 +14,7 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         
         tabBar.tintColor = UIColor.orange
-        self.addChildViewControllers()
-        
-        
-        
+        self.addChildViewControllers()  
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -138,15 +135,13 @@ class MainViewController: UITabBarController {
     
     
 }
-//extension UIButton
-//{
-//      func createButton(imageName: String,backgroundImage: String) {
-//       
-//        setImage(UIImage.init(named: imageName), for: .normal)
-//        setImage(UIImage.init(named: imageName + "_highlighted"), for: .highlighted)
-//        setBackgroundImage(UIImage.init(named: backgroundImage), for: .normal)
-//        setBackgroundImage(UIImage.init(named: backgroundImage + "_highlighted"), for: .highlighted)
-//        sizeToFit()
-//    }
-//    
-//}
+extension UIButton
+{
+      func createButton(imageName: String) {
+       
+        setImage(UIImage.init(named: imageName), for: .normal)
+        setImage(UIImage.init(named: imageName + "_highlighted"), for: .highlighted)
+        sizeToFit()
+    }
+    
+}

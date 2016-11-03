@@ -24,6 +24,8 @@
 		39B37DAC1DC8B98000202E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B37DAA1DC8B98000202E2A /* LaunchScreen.storyboard */; };
 		39B37DB71DC8B98000202E2A /* ZXWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DB61DC8B98000202E2A /* ZXWeiBoTests.swift */; };
 		39B37DC21DC8B98000202E2A /* ZXWeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DC11DC8B98000202E2A /* ZXWeiBoUITests.swift */; };
+		39FDB08E1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FDB08D1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift */; };
+		39FDB0901DCACF2900BD11D4 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FDB08F1DCACF2900BD11D4 /* TitleButton.swift */; };
 		C21A24D05658D1383A18E7A5 /* Pods_ZXWeiBoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A95B53D784F4368A7262181 /* Pods_ZXWeiBoTests.framework */; };
 		CF6450274C8DC1D5C016B2BC /* Pods_ZXWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8FAD73893343FA963BBA0E /* Pods_ZXWeiBo.framework */; };
 		F3419E47B1E798D544071AD0 /* Pods_ZXWeiBoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F22007A8E1A67029FF5DBB4 /* Pods_ZXWeiBoUITests.framework */; };
@@ -72,6 +74,8 @@
 		39B37DBD1DC8B98000202E2A /* ZXWeiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXWeiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B37DC11DC8B98000202E2A /* ZXWeiBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZXWeiBoUITests.swift; sourceTree = "<group>"; };
 		39B37DC31DC8B98000202E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39FDB08D1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem + Extension.swift"; sourceTree = "<group>"; };
+		39FDB08F1DCACF2900BD11D4 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		3EEC7FD2EFAE1B1CADCEB9C7 /* Pods-ZXWeiBoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXWeiBoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXWeiBoUITests/Pods-ZXWeiBoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F22007A8E1A67029FF5DBB4 /* Pods_ZXWeiBoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZXWeiBoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A95B53D784F4368A7262181 /* Pods_ZXWeiBoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZXWeiBoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				391499A51DC9E54500E8E22A /* UIButton + Extension.swift */,
+				39FDB08D1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift */,
+				39FDB08F1DCACF2900BD11D4 /* TitleButton.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -558,10 +564,12 @@
 				39B37DA21DC8B98000202E2A /* AppDelegate.swift in Sources */,
 				391499971DC9A76C00E8E22A /* DiscoverTableViewController.swift in Sources */,
 				3914999B1DC9A78B00E8E22A /* MessageTableViewController.swift in Sources */,
+				39FDB08E1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift in Sources */,
 				391499A61DC9E54500E8E22A /* UIButton + Extension.swift in Sources */,
 				39B27D2A1DCA467B00F56141 /* VistorView.swift in Sources */,
 				391499A41DC9BECF00E8E22A /* NullViewController.swift in Sources */,
 				391499991DC9A77800E8E22A /* ComposeTableViewController.swift in Sources */,
+				39FDB0901DCACF2900BD11D4 /* TitleButton.swift in Sources */,
 				3914999F1DC9BA7600E8E22A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
