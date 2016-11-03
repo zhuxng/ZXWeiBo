@@ -97,6 +97,7 @@ class MainViewController: UITabBarController {
         /*
          childController.title = title该句代码相当于childController.navigationItem.title = title childController.tabBarItem.title = title
          */
+    
         childController.title = title
         
         childController.tabBarItem.image = UIImage(named: imageName)

@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        print(#function)
 //        print(#line)
         
-        
+
         
         UINavigationBar.appearance().tintColor = UIColor.orange
         return true

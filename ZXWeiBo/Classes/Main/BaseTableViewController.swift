@@ -16,6 +16,10 @@ class BaseTableViewController: UITableViewController {
         isLogin ? super.loadView() : setUpVisitorView()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(BaseTableViewController.registerBtnClick))
          navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(BaseTableViewController.loginBtnClick))
+        //修改导航条上标题颜色
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSForegroundColorAttributeName: UIColor.orange]
+
     }
 
     func setUpVisitorView() {
