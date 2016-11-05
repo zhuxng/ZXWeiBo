@@ -34,6 +34,8 @@ class BaseTableViewController: UITableViewController {
     }
     func loginBtnClick(btn: UIButton) {
         ZXLog(message: "")
+        
+        
     }
 }
 
