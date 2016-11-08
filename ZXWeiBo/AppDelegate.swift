@@ -14,23 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+        //创建window
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
+        //设置Window的根视图控制器
         window?.rootViewController = MainViewController()
+        //设置Window可见
         window?.makeKeyAndVisible()
-        
-        
-        // Override point for customization after application launch.\
-//        QorumLogs.enabled = true
-//        QorumLogs.test()
-       
-//        print(#file)
-//        print(#function)
-//        print(#line)
-        
-
-        
+        //导航栏的tintColor
         UINavigationBar.appearance().tintColor = UIColor.orange
         return true
     }
@@ -40,7 +31,10 @@ func ZXLog<T>(message: T, fileName: String = #file, methodName: String = #functi
 {
 //    print("\(fileName as NSString))\n\(methodName)\n lineNumber:\(lineNumber)\nmessage:\(message)")
     #if DEBUG
-        print("在\(methodName)方法中的[第\(lineNumber)行]打印信息:\(message)")
+
+             print("在\((fileName as NSString).pathComponents.last!)控制器中在\(methodName)方法中的[第\(lineNumber)行]打印信息:\(message)")
+        
+       
     #endif
 }
 

@@ -18,4 +18,11 @@ extension UIButton
         sizeToFit()
     }
     
+    func createButton(imageName: String) {
+        
+        setImage(UIImage.init(named: imageName), for: .normal)
+        setImage(UIImage.init(named: imageName + "_highlighted"), for: .highlighted)
+        sizeToFit()
+    }
+    
 }

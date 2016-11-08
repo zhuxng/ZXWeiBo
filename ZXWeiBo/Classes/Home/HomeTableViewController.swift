@@ -21,45 +21,46 @@ class HomeTableViewController: BaseTableViewController {
 
         
     }
+        // MARK: - 再次回到HomeTableViewController动画不消失
+//    override func viewDidAppear(_ animated: Bool) {
+//        visitorView.startAnimation()
+//        
+//    }
+    // MARK: - 内部控制
     func setupNav(){
+        //MARK: - 添加左右按钮
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "navigationbar_friendattention",target: self, action: #selector(HomeTableViewController.leftBtnClick))
         navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop",target: self, action: #selector(HomeTableViewController.rigthBtnClick))
         
-        
+        //MARK: - 创建标题按钮
         let titleBtn = TitleButton()
         titleBtn.setTitle("朱星   ", for: .normal)
         titleBtn.addTarget(self, action: #selector(HomeTableViewController.titleBtnClick), for: .touchUpInside)
         navigationItem.titleView = titleBtn
     }
-    
-    
-        // 再次回到HomeTableViewController动画不消失
-//    override func viewDidAppear(_ animated: Bool) {
-//        ZXLog(message: "2")
-//        visitorView.startAnimation()
-//        
-//    }
-    func titleBtnClick(btn:UIButton)  {
+    @objc private func titleBtnClick(btn:UIButton)  {
         btn.isSelected = !btn.isSelected
+        //MARK: - 通过UIStoryboard创建一个UIViewController
         let sb = UIStoryboard(name: "Popover", bundle: nil)
         guard let menuView = sb.instantiateInitialViewController() else {
             return
         }
+        //MARK: - 以模态方式弹出UIViewController《从下忘上弹出》
         menuView.transitioningDelegate = self
         menuView.modalPresentationStyle = .custom
-        present(menuView, animated: true, completion: nil)
-        
-        
+        present(menuView, animated: true)
     }
     
-    func leftBtnClick(btn:UIButton) {
+    @objc private func leftBtnClick(btn:UIButton) {
         ZXLog(message: 1)
     }
-    func rigthBtnClick(btn:UIButton) {
+    @objc private func rigthBtnClick(btn:UIButton) {
         ZXLog(message: 2)
     }
      var isPresent = false
 }
+
+// MARK: - 点击title弹出界面的方法
 extension HomeTableViewController: UIViewControllerTransitioningDelegate {
     //返回一个专场的对象
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {

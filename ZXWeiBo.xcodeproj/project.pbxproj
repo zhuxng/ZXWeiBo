@@ -151,8 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				391499941DC9A74E00E8E22A /* HomeTableViewController.swift */,
-				39FDB0911DCB31CA00BD11D4 /* Popover.storyboard */,
 				39FDB0931DCB377300BD11D4 /* ZXPresentationController.swift */,
+				39FDB0911DCB31CA00BD11D4 /* Popover.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";

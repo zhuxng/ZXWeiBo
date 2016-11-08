@@ -9,10 +9,10 @@
         "mode" : "3-part-vertical",
         "center" : {
           "mode" : "stretch",
-          "height" : 1
+          "height" : 2
         },
         "cap-insets" : {
-          "top" : 48,
+          "top" : 47,
           "bottom" : 49
         }
       },

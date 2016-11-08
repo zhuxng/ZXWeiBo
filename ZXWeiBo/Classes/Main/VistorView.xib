@@ -22,10 +22,10 @@
                     <rect key="frame" x="0.0" y="146" width="375" height="325"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_house" translatesAutoresizingMaskIntoConstraints="NO" id="l5f-Pt-0E0" userLabel="图标">
-                    <rect key="frame" x="141" y="289" width="94" height="90"/>
+                    <rect key="frame" x="140.5" y="288.5" width="94" height="90"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cua-zm-dey" userLabel="文本">
-                    <rect key="frame" x="88" y="431" width="200" height="21"/>
+                    <rect key="frame" x="87.5" y="431" width="200" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="WdS-yR-dWQ"/>
                     </constraints>
@@ -34,7 +34,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltN-Kd-eAe">
-                    <rect key="frame" x="88" y="472" width="80" height="34"/>
+                    <rect key="frame" x="87.5" y="472" width="80" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="PDa-GW-uaU"/>
                     </constraints>
@@ -43,7 +43,7 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le6-Iz-u70" userLabel="登录">
-                    <rect key="frame" x="208" y="472" width="80" height="34"/>
+                    <rect key="frame" x="207.5" y="472" width="80" height="34"/>
                     <state key="normal" title="登录" backgroundImage="common_button_white_disable">
                         <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -74,7 +74,7 @@
                 <outlet property="rotationView" destination="AX2-id-XN3" id="ne6-Pu-yRv"/>
                 <outlet property="textLabel" destination="Cua-zm-dey" id="Gqq-Cc-qPg"/>
             </connections>
-            <point key="canvasLocation" x="24.5" y="51.5"/>
+            <point key="canvasLocation" x="414" y="-163"/>
         </view>
     </objects>
     <resources>

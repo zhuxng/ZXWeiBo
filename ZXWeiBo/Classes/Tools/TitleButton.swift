@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//自定义title按钮，并且改变图片和文字的位置
 class TitleButton: UIButton {
 
     override func layoutSubviews() {
@@ -15,6 +15,7 @@ class TitleButton: UIButton {
         titleLabel?.frame.origin.x = 0
         imageView?.frame.origin.x = (titleLabel?.frame.width)!
     }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setImage(UIImage(named:"navigationbar_arrow_down"), for: .normal)

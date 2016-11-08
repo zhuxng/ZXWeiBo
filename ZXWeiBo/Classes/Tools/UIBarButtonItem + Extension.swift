@@ -12,7 +12,6 @@ extension UIBarButtonItem
 {
     convenience init(imageName: String,target: AnyObject?, action: Selector){
         let btn = UIButton()
-        
         btn.createButton(imageName: imageName)
         btn.addTarget(target, action: action, for: .touchUpInside)
         self.init(customView: btn)
