@@ -7,8 +7,27 @@
 //
 
 import UIKit
+import AVFoundation
 
 class QRCodeViewController: UIViewController {
+    
+    
+    
+    // MARK: - 懒加载二维码扫描
+    //输入对象
+    private  var input: AVCaptureDeviceInput? = {
+        let divice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        return try? AVCaptureDeviceInput(device: divice)
+    }()
+    //回话
+    var session = AVCaptureSession()
+    //输出对象
+    var output = AVCaptureMetadataOutput()
+    
+    //预览图层
+    var preViewLayer = AVCaptureVideoPreviewLayer()
+    //结果文本
+    @IBOutlet weak var customLabel: UILabel!
 
     @IBOutlet weak var scanLineView: UIImageView!
     //冲击波约束
@@ -22,6 +41,37 @@ class QRCodeViewController: UIViewController {
         //选中第一个tabBarItem
         customTabBar.selectedItem  = customTabBar.items?.first
         customTabBar.delegate = self
+        //3、开始扫描
+        scanQRcode()
+        
+    }
+    
+    
+    private func scanQRcode() {
+        
+        //1、判断输入能否添加到回话中
+        if !session.canAddInput(input) {
+            return
+        }
+        //2、判断输出能否添加到回话中
+        if !session.canAddOutput(output) {
+            return
+        }
+        //3、添加输入输出到会话中
+        session.addInput(input)
+        session.addOutput(output)
+        
+        //4、设置输出能解析的数据类型
+        output.metadataObjectTypes = output.availableMetadataObjectTypes
+        //5、设置监听输出解析到的数据
+        output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+        //6、添加预览图层
+        
+        preViewLayer = AVCaptureVideoPreviewLayer(session: session)
+        preViewLayer.frame = view.bounds
+        view.layer.insertSublayer(preViewLayer, at: 0)
+        //7、开始扫描
+        session.startRunning()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -47,17 +97,21 @@ class QRCodeViewController: UIViewController {
 
     @IBAction func photoBtn(_ sender: Any) {
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
+  
 }
+
+// MARK: - 遵循协议
+extension QRCodeViewController :AVCaptureMetadataOutputObjectsDelegate {
+    
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!){
+        ZXLog(message: metadataObjects.last)
+        
+        
+        customLabel.text = metadataObjects.last.debugDescription
+    }
+}
+
 extension QRCodeViewController :UITabBarDelegate {
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
 

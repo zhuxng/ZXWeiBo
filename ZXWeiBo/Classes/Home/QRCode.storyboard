@@ -53,7 +53,7 @@
                                 </items>
                                 <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </tabBar>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caR-vZ-maK">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caR-vZ-maK" userLabel="容器视图">
                                 <rect key="frame" x="38" y="184" width="300" height="300"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="qOY-bu-5jN" userLabel="边框">
@@ -63,7 +63,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="4Qx-H6-ziw"/>
                                     <constraint firstAttribute="bottom" secondItem="qOY-bu-5jN" secondAttribute="bottom" id="Ar0-rb-2aM"/>
@@ -77,14 +77,23 @@
                                     <constraint firstItem="NvW-BF-MU4" firstAttribute="height" secondItem="caR-vZ-maK" secondAttribute="height" id="u3D-Yq-Hwo"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请把镜头对准二维码" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMx-0s-UKv">
+                                <rect key="frame" x="38" y="494" width="300" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.78874966308300287" blue="0.15400953527000671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="caR-vZ-maK" firstAttribute="centerY" secondItem="iBQ-Og-YPx" secondAttribute="centerY" id="Igh-gl-D4D"/>
                             <constraint firstItem="caR-vZ-maK" firstAttribute="centerX" secondItem="iBQ-Og-YPx" secondAttribute="centerX" id="Mxl-Ec-Hqt"/>
                             <constraint firstAttribute="bottom" secondItem="4Nb-IS-DJE" secondAttribute="bottom" id="Shx-As-1gk"/>
+                            <constraint firstItem="IMx-0s-UKv" firstAttribute="top" secondItem="caR-vZ-maK" secondAttribute="bottom" constant="10" id="Ukp-aV-hzM"/>
                             <constraint firstItem="4Nb-IS-DJE" firstAttribute="leading" secondItem="iBQ-Og-YPx" secondAttribute="leading" id="fdP-jh-lVF"/>
+                            <constraint firstItem="IMx-0s-UKv" firstAttribute="leading" secondItem="caR-vZ-maK" secondAttribute="leading" id="hcH-KW-uhU"/>
                             <constraint firstAttribute="trailing" secondItem="4Nb-IS-DJE" secondAttribute="trailing" id="iDe-wb-srd"/>
+                            <constraint firstItem="IMx-0s-UKv" firstAttribute="trailing" secondItem="caR-vZ-maK" secondAttribute="trailing" id="xS1-Ua-mJq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="扫一扫" id="C6j-9j-02p">
@@ -102,6 +111,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="containerHeightCOns" destination="4Qx-H6-ziw" id="msn-fq-2Yg"/>
+                        <outlet property="customLabel" destination="IMx-0s-UKv" id="tLv-d2-loF"/>
                         <outlet property="customTabBar" destination="4Nb-IS-DJE" id="y25-mM-8TN"/>
                         <outlet property="scanLineCons" destination="Dda-Kp-eIf" id="h2m-lr-UiV"/>
                         <outlet property="scanLineView" destination="NvW-BF-MU4" id="Fgu-pU-5UC"/>
