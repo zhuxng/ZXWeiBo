@@ -10,27 +10,25 @@ import UIKit
 
 class ZXPresentationController: UIPresentationController {
 
-    lazy var coverBtn: UIButton = {
+    private lazy var coverBtn: UIButton = {
+        //MARK: - 添加蒙版
         let btn = UIButton()
+        btn.frame = UIScreen.main.bounds
+        btn.addTarget(self, action: #selector(ZXPresentationController.coverBtnClick), for: .touchUpInside)
+//        btn.backgroundColor = UIColor.gray
         return btn
     }()
-    //布局专场动画弹出控件
+    //MARK: - 布局专场动画弹出控件
     override func containerViewWillLayoutSubviews() {
         //containerView 容器视图
         //presentedView 拿到弹出的视图
         presentedView?.frame = CGRect(x: 100, y: 50, width: 200, height: 200)
-        coverBtn.frame = UIScreen.main.bounds
-        coverBtn.addTarget(self, action: #selector(ZXPresentationController.coverBtnClick), for: .touchUpInside)
         containerView?.insertSubview(coverBtn, at: 0)
         
     }
-    
-    func coverBtnClick()  {
-       presentedViewController.dismiss(animated: true, completion: nil)
+    //MARK: - 消失
+    func coverBtnClick() {
+        presentedViewController.dismiss(animated: true, completion: nil)
     }
     
-     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
-        
-        return UIModalPresentationStyle.popover
-    }
 }
