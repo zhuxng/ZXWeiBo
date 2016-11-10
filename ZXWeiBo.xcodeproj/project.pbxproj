@@ -16,6 +16,7 @@
 		391499A31DC9BECF00E8E22A /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 391499A11DC9BECF00E8E22A /* MainVCSettings.json */; };
 		391499A41DC9BECF00E8E22A /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391499A21DC9BECF00E8E22A /* NullViewController.swift */; };
 		391499A61DC9E54500E8E22A /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391499A51DC9E54500E8E22A /* UIButton + Extension.swift */; };
+		39195C131DD465C100C3FA7D /* MyBusinessCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39195C121DD465C100C3FA7D /* MyBusinessCardViewController.swift */; };
 		396CB08C1DD248AF0056DC36 /* ZXPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396CB08B1DD248AF0056DC36 /* ZXPresentationManager.swift */; };
 		396CB08F1DD256FF0056DC36 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 396CB08E1DD256FF0056DC36 /* QRCode.storyboard */; };
 		396CB0911DD25BC90056DC36 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396CB0901DD25BC90056DC36 /* QRCodeViewController.swift */; };
@@ -65,6 +66,7 @@
 		391499A11DC9BECF00E8E22A /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		391499A21DC9BECF00E8E22A /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
 		391499A51DC9E54500E8E22A /* UIButton + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		39195C121DD465C100C3FA7D /* MyBusinessCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBusinessCardViewController.swift; sourceTree = "<group>"; };
 		396CB08B1DD248AF0056DC36 /* ZXPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXPresentationManager.swift; sourceTree = "<group>"; };
 		396CB08E1DD256FF0056DC36 /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		396CB0901DD25BC90056DC36 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			children = (
 				396CB08E1DD256FF0056DC36 /* QRCode.storyboard */,
 				396CB0901DD25BC90056DC36 /* QRCodeViewController.swift */,
+				39195C121DD465C100C3FA7D /* MyBusinessCardViewController.swift */,
 			);
 			name = QRCode;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 			files = (
 				3914999D1DC9A79700E8E22A /* ProfileTableViewController.swift in Sources */,
 				391499951DC9A74E00E8E22A /* HomeTableViewController.swift in Sources */,
+				39195C131DD465C100C3FA7D /* MyBusinessCardViewController.swift in Sources */,
 				396CB0911DD25BC90056DC36 /* QRCodeViewController.swift in Sources */,
 				396CB08C1DD248AF0056DC36 /* ZXPresentationManager.swift in Sources */,
 				39B27D281DCA424600F56141 /* BaseTableViewController.swift in Sources */,
