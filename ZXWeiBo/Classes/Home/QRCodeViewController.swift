@@ -115,12 +115,52 @@ class QRCodeViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    //MARK: - 打开相册
     @IBAction func photoBtn(_ sender: Any) {
+
+        if !UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            return
+        }
+        let imagePickerVC = UIImagePickerController()
+        imagePickerVC.delegate = self
+        present(imagePickerVC, animated: true, completion: nil)
+        
+    
+    
     }
    
   
 }
 
+//MARK: - 必须实现这两个代理UINavigationControllerDelegate,UIImagePickerControllerDelegate
+extension QRCodeViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        //1、从字典中拿到照片
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+            return
+        }
+        //2、选中二维码读取数据
+        //2.1 创建一个探测器CIDetectorTypeQRCode《二维码》/CIDetectorTypeFace<人脸>/CIDetectorTypeText《文字》/CIDetectorTypeRectangle<矩形>
+        let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
+        //2.2 探测数据
+        guard let ciimage = CIImage(image: image) else {
+            return
+        }
+        let results = detector?.features(in: ciimage)
+        
+        //2.3 取出探测到的数据
+        for result in results! {
+        ZXLog(message: (result as! CIQRCodeFeature).messageString)
+            
+        }
+        
+        //实现该方法后，系统不会自动关闭
+        picker.dismiss(animated: true, completion: nil)
+        
+        
+        
+    }
+}
 //MARK: - 遵循AVCaptureMetadataOutputObjectsDelegate协议
 extension QRCodeViewController :AVCaptureMetadataOutputObjectsDelegate {
     
