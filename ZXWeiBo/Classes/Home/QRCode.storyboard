@@ -111,6 +111,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="containerHeightCOns" destination="4Qx-H6-ziw" id="msn-fq-2Yg"/>
+                        <outlet property="customContainerView" destination="caR-vZ-maK" id="3q1-lR-muM"/>
                         <outlet property="customLabel" destination="IMx-0s-UKv" id="tLv-d2-loF"/>
                         <outlet property="customTabBar" destination="4Nb-IS-DJE" id="y25-mM-8TN"/>
                         <outlet property="scanLineCons" destination="Dda-Kp-eIf" id="h2m-lr-UiV"/>
