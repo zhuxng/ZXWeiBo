@@ -7,6 +7,7 @@ target 'ZXWeiBo' do
 
 pod 'QorumLogs'
 
+pod 'AFNetworking'
 
   # Pods for ZXWeiBo
 

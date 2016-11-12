@@ -28,6 +28,10 @@
 		39B37DAC1DC8B98000202E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B37DAA1DC8B98000202E2A /* LaunchScreen.storyboard */; };
 		39B37DB71DC8B98000202E2A /* ZXWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DB61DC8B98000202E2A /* ZXWeiBoTests.swift */; };
 		39B37DC21DC8B98000202E2A /* ZXWeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B37DC11DC8B98000202E2A /* ZXWeiBoUITests.swift */; };
+		39DD36FC1DD4BA840014241D /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD36FB1DD4BA840014241D /* OAuthViewController.swift */; };
+		39DD36FE1DD4BA900014241D /* OAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39DD36FD1DD4BA900014241D /* OAuth.storyboard */; };
+		39F1D5D21DD6FCF6007DD291 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F1D5D11DD6FCF6007DD291 /* NetworkTools.swift */; };
+		39F1D5D41DD704E0007DD291 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F1D5D31DD704E0007DD291 /* UserAccount.swift */; };
 		39FDB08E1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FDB08D1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift */; };
 		39FDB0901DCACF2900BD11D4 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FDB08F1DCACF2900BD11D4 /* TitleButton.swift */; };
 		39FDB0921DCB31CA00BD11D4 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39FDB0911DCB31CA00BD11D4 /* Popover.storyboard */; };
@@ -84,6 +88,10 @@
 		39B37DBD1DC8B98000202E2A /* ZXWeiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXWeiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B37DC11DC8B98000202E2A /* ZXWeiBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZXWeiBoUITests.swift; sourceTree = "<group>"; };
 		39B37DC31DC8B98000202E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39DD36FB1DD4BA840014241D /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		39DD36FD1DD4BA900014241D /* OAuth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OAuth.storyboard; sourceTree = "<group>"; };
+		39F1D5D11DD6FCF6007DD291 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		39F1D5D31DD704E0007DD291 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		39FDB08D1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem + Extension.swift"; sourceTree = "<group>"; };
 		39FDB08F1DCACF2900BD11D4 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		39FDB0911DCB31CA00BD11D4 /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popover.storyboard; sourceTree = "<group>"; };
@@ -128,6 +136,7 @@
 		3914998C1DC9A72D00E8E22A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				39DD36FA1DD4BA650014241D /* OAuth */,
 				3914998D1DC9A72D00E8E22A /* Compose */,
 				3914998E1DC9A72D00E8E22A /* Discover */,
 				3914998F1DC9A72D00E8E22A /* Home */,
@@ -201,6 +210,7 @@
 				391499A51DC9E54500E8E22A /* UIButton + Extension.swift */,
 				39FDB08D1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift */,
 				39FDB08F1DCACF2900BD11D4 /* TitleButton.swift */,
+				39F1D5D11DD6FCF6007DD291 /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -274,6 +284,16 @@
 				39B37DC31DC8B98000202E2A /* Info.plist */,
 			);
 			path = ZXWeiBoUITests;
+			sourceTree = "<group>";
+		};
+		39DD36FA1DD4BA650014241D /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				39DD36FB1DD4BA840014241D /* OAuthViewController.swift */,
+				39F1D5D31DD704E0007DD291 /* UserAccount.swift */,
+				39DD36FD1DD4BA900014241D /* OAuth.storyboard */,
+			);
+			name = OAuth;
 			sourceTree = "<group>";
 		};
 		E1EF2FB13B428656F1DEA36E /* Frameworks */ = {
@@ -419,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39B37DAC1DC8B98000202E2A /* LaunchScreen.storyboard in Resources */,
+				39DD36FE1DD4BA900014241D /* OAuth.storyboard in Resources */,
 				39B27D2C1DCA468900F56141 /* VistorView.xib in Resources */,
 				39B37DA91DC8B98000202E2A /* Assets.xcassets in Resources */,
 				39FDB0921DCB31CA00BD11D4 /* Popover.storyboard in Resources */,
@@ -590,12 +611,15 @@
 				391499951DC9A74E00E8E22A /* HomeTableViewController.swift in Sources */,
 				39195C131DD465C100C3FA7D /* MyBusinessCardViewController.swift in Sources */,
 				396CB0911DD25BC90056DC36 /* QRCodeViewController.swift in Sources */,
+				39F1D5D41DD704E0007DD291 /* UserAccount.swift in Sources */,
 				396CB08C1DD248AF0056DC36 /* ZXPresentationManager.swift in Sources */,
+				39F1D5D21DD6FCF6007DD291 /* NetworkTools.swift in Sources */,
 				39B27D281DCA424600F56141 /* BaseTableViewController.swift in Sources */,
 				39B37DA21DC8B98000202E2A /* AppDelegate.swift in Sources */,
 				391499971DC9A76C00E8E22A /* DiscoverTableViewController.swift in Sources */,
 				3914999B1DC9A78B00E8E22A /* MessageTableViewController.swift in Sources */,
 				39FDB08E1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift in Sources */,
+				39DD36FC1DD4BA840014241D /* OAuthViewController.swift in Sources */,
 				391499A61DC9E54500E8E22A /* UIButton + Extension.swift in Sources */,
 				39B27D2A1DCA467B00F56141 /* VistorView.swift in Sources */,
 				391499A41DC9BECF00E8E22A /* NullViewController.swift in Sources */,

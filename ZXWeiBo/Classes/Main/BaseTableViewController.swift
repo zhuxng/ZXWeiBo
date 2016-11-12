@@ -10,7 +10,7 @@ import UIKit
 
 class BaseTableViewController: UITableViewController {
 
-    var isLogin = true
+    var isLogin = UserAccount.isLogin()
     var visitorView = VistorView()
     override func loadView() {
         isLogin ? super.loadView() : setUpVisitorView()
@@ -33,8 +33,9 @@ class BaseTableViewController: UITableViewController {
         ZXLog(message: "")
     }
     func loginBtnClick(btn: UIButton) {
-        ZXLog(message: "")
-        
+        let sb = UIStoryboard(name: "OAuth", bundle: nil)
+        let VC = sb.instantiateInitialViewController()
+        present(VC!, animated: true, completion: nil)
         
     }
 }
