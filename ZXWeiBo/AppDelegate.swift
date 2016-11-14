@@ -24,15 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //导航栏的tintColor
         UINavigationBar.appearance().tintColor = UIColor.orange
         UITabBar.appearance().tintColor = UIColor.orange
-        
-        
-        ZXLog(message: UserAccount.loadUserAccount())
-        ZXLog(message: UserAccount.loadUserAccount())
-        ZXLog(message: UserAccount.loadUserAccount())
-        ZXLog(message: UserAccount.loadUserAccount())
-
-        
-        
+       ZXLog(message: UserAccount.loadUserAccount())
         return true
     }
 }

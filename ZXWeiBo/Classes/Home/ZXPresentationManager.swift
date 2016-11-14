@@ -7,8 +7,7 @@
 //
 
 import UIKit
-let ZXPresentationManagerDIdPresented = "ZXPresentationManagerDIdPresented"
-let ZXPresentationManagerDIddismissed = "ZXPresentationManagerDIddismissed"
+
 // MARK: - 点击title弹出界面的方法  交给一个类来管理
 class ZXPresentationManager: NSObject, UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning {
     

@@ -14,7 +14,8 @@ class HomeTableViewController: BaseTableViewController {
     private lazy var animatorManager = ZXPresentationManager()
     private lazy var titleBtn: TitleButton = {
         let btn = TitleButton()
-        btn.setTitle("朱星   ", for: .normal)
+        let title = UserAccount.loadUserAccount()?.screen_name
+        btn.setTitle(title, for: .normal)
         btn.addTarget(self, action: #selector(HomeTableViewController.titleBtnClick), for: .touchUpInside)
         return btn
     }()
