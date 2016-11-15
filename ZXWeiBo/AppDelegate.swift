@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  ZXWeiBo
 //
@@ -18,20 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         //设置Window的根视图控制器
-        window?.rootViewController = MainViewController()
+      
+        let sb = UIStoryboard(name: "NewFeatrue", bundle: nil)
+        let vc = sb.instantiateInitialViewController()!
+       
+        
+        window?.rootViewController = vc
         //设置Window可见
         window?.makeKeyAndVisible()
         //导航栏的tintColor
         UINavigationBar.appearance().tintColor = UIColor.orange
+        //TabBar栏的tintColor
         UITabBar.appearance().tintColor = UIColor.orange
-       ZXLog(message: UserAccount.loadUserAccount())
         return true
     }
 }
 
 func ZXLog<T>(message: T, fileName: String = #file, methodName: String = #function, lineNumber:Int = #line)
 {
-//    print("\(fileName as NSString))\n\(methodName)\n lineNumber:\(lineNumber)\nmessage:\(message)")
     #if DEBUG
 
              print("在\((fileName as NSString).pathComponents.last!)控制器中在\(methodName)方法中的[第\(lineNumber)行]打印信息:\(message)")

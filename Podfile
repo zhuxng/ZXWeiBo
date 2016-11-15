@@ -9,6 +9,12 @@ pod 'QorumLogs'
 
 pod 'AFNetworking'
 
+pod 'SVProgressHUD'
+pod 'SDWebImage'
+pod 'SnapKit'
+
+
+
   # Pods for ZXWeiBo
 
   target 'ZXWeiBoTests' do
