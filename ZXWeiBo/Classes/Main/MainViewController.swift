@@ -21,7 +21,7 @@ class MainViewController: UITabBarController {
         //设置composeButton在tabBar上的frame
         let rect = composeButton.frame
         let width = tabBar.bounds.width / CGFloat(childViewControllers.count)
-        composeButton.frame = CGRect(x: 2 * width, y: -20, width: width, height: rect.height)
+        composeButton.frame = CGRect(x: 2 * width, y: 0, width: width, height: rect.height)
     }
     //MARK: - 内部控制
     func addChildViewControllers()
@@ -42,7 +42,6 @@ class MainViewController: UITabBarController {
         // 1.2将JSON数据转换为对象(数组字典)
         do
         {
-        
             let dic = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String: AnyObject]]
             // 1.3遍历数组字典取出每一个字典
             for dict in dic

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.orange
 
         
-         // 2.注册监听
+         // 2.注册通知监听
         NotificationCenter.default.addObserver(self, selector:
             #selector(AppDelegate.changeRootViewController), name: NSNotification.Name(rawValue: ZXSwitchRootViewController), object: nil)
         //创建window
@@ -32,8 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = defaultViewController()
         //设置Window可见
         window?.makeKeyAndVisible()
+//        ZXLog(message: UserAccount.loadUserAccount()?.access_token)
         return true
         
+    }
+    deinit {
+        //移除通知
+        NotificationCenter.default.removeObserver(self)
     }
 }
  extension AppDelegate {

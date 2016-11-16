@@ -6,7 +6,7 @@
 //  Copyright © 2016年 zhuxing. All rights reserved.
 //
 
-import Foundation
+import UIKit
 //MARK: - 授权
 //OAuth授权需要的App_Key
 let WB_App_Key = "1334968497"
@@ -22,5 +22,8 @@ let ZXPresentationManagerDIdPresented = "ZXPresentationManagerDIdPresented"
 let ZXPresentationManagerDIddismissed = "ZXPresentationManagerDIddismissed"
 /// 切换根控制器的通知
 let ZXSwitchRootViewController =  "ZXSwitchRootViewController"
+
+let ZXScreenHeight = UIScreen.main.bounds.height
+let ZXScreenWidth = UIScreen.main.bounds.width
 
 

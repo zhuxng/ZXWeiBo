@@ -23,8 +23,6 @@ class BaseTableViewController: UITableViewController {
         //去访问点击按钮属性
         visitorView.registerButton.addTarget(self, action: #selector(BaseTableViewController.registerBtnClick), for: .touchUpInside)
          visitorView.loginButton.addTarget(self, action: #selector(BaseTableViewController.loginBtnClick), for: .touchUpInside)
-        
-        
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(BaseTableViewController.registerBtnClick))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(BaseTableViewController.loginBtnClick))
     }

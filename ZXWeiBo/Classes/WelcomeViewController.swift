@@ -30,12 +30,12 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        iconBottomCons.constant = UIScreen.main.bounds.height - 160
-        UIView.animate(withDuration: 2, animations: {
+        iconBottomCons.constant = ZXScreenHeight - 160
+        UIView.animate(withDuration: 1, animations: {
             self.view.layoutIfNeeded()
             
         }) { (_) in
-            UIView.animate(withDuration: 2.0, animations: {
+            UIView.animate(withDuration: 1.0, animations: {
                 self.titleLable.alpha = 1.0
             }, completion: { (_) in
                 //跳转首页
