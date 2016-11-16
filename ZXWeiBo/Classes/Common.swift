@@ -18,5 +18,9 @@ let WB_redirect_uri = "http://www.520it.com"
 //MARK: - 自定义的本地通知
 // 自定义转场
 let ZXPresentationManagerDIdPresented = "ZXPresentationManagerDIdPresented"
-// 自定义转场消失
+/// 自定义转场消失
 let ZXPresentationManagerDIddismissed = "ZXPresentationManagerDIddismissed"
+/// 切换根控制器的通知
+let ZXSwitchRootViewController =  "ZXSwitchRootViewController"
+
+

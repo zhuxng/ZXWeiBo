@@ -19,7 +19,7 @@ class QRCodeViewController: UIViewController {
         let divice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         return try? AVCaptureDeviceInput(device: divice)
     }()
-    //MARK: -回话
+    //MARK: -会话
     var session = AVCaptureSession()
     //MARK: -输出对象
     lazy var output: AVCaptureMetadataOutput = {
@@ -56,7 +56,7 @@ class QRCodeViewController: UIViewController {
         super.viewDidLoad()
         //MARK: - 1、选中第一个tabBarItem
         customTabBar.selectedItem  = customTabBar.items?.first
-        //MARK: - 设置tabbar的代理
+        //MARK: - 2、设置tabbar的代理
         customTabBar.delegate = self
         //3、开始扫描
         scanQRcode()
@@ -66,11 +66,11 @@ class QRCodeViewController: UIViewController {
     //MARK: - 二维码扫描
     private func scanQRcode() {
         
-        //1、判断输入能否添加到回话中
+        //1、判断输入能否添加到会话中
         if !session.canAddInput(input) {
             return
         }
-        //2、判断输出能否添加到回话中
+        //2、判断输出能否添加到会话中
         if !session.canAddOutput(output) {
             return
         }
@@ -83,7 +83,6 @@ class QRCodeViewController: UIViewController {
         //5、设置监听输出解析到的数据
         output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         //6、添加预览图层
-        
         preViewLayer = AVCaptureVideoPreviewLayer(session: session)
         preViewLayer.frame = view.bounds
         view.layer.insertSublayer(preViewLayer, at: 0)

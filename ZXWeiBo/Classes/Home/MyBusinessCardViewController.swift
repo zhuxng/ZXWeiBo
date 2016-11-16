@@ -57,4 +57,6 @@ class MyBusinessCardViewController: UIViewController {
      
      return UIImage(cgImage: scaledImage)
      }
+    
+    
 }

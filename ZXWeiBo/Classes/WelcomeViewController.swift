@@ -38,6 +38,8 @@ class WelcomeViewController: UIViewController {
             UIView.animate(withDuration: 2.0, animations: {
                 self.titleLable.alpha = 1.0
             }, completion: { (_) in
+                //跳转首页
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: ZXSwitchRootViewController), object: true)
                 
             })
         }

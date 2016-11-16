@@ -13,6 +13,28 @@ import SVProgressHUD
 class OAuthViewController: UIViewController {
     var isSave = false
     @IBOutlet weak var customWebView: UIWebView!
+    
+    @IBAction func coloseBtnClicked(_ sender: Any) {
+        
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    @IBAction func autoBtnClicked(_ sender: Any) {
+        
+        
+        let jsStr = "document.getElementById('userId').value = 'zx13890504900@sina.com';"
+        
+        let password = "document.getElementById('passwd').value = 'zhuxing891006';"
+     
+        customWebView.stringByEvaluatingJavaScript(from: password)
+        
+        customWebView.stringByEvaluatingJavaScript(from: jsStr)
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -27,7 +49,11 @@ class OAuthViewController: UIViewController {
 extension OAuthViewController: UIWebViewDelegate {
     
     func webViewDidStartLoad(_ webView: UIWebView) {
-        SVProgressHUD.showInfo(withStatus: "加载中...")
+        
+        SVProgressHUD.showInfo(withStatus: "拼命加载中...")
+        SVProgressHUD.showProgress(100)
+        SVProgressHUD.show()
+        
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
         SVProgressHUD.dismiss()
@@ -71,10 +97,14 @@ extension OAuthViewController: UIWebViewDelegate {
         //3、发送pust请求
         NetworkTools.shareInstance.post(path, parameters: parameters, progress: nil, success: { (task: URLSessionDataTask, dict: Any?) in
             //授权成功
+            
             //字典转模型
             let account = UserAccount(dict: dict as! [String : AnyObject])
             account.loadUserInfo(finished: { (acount, error) in
                self.isSave = account.saveAccount()
+                // 发出通知
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: ZXSwitchRootViewController), object: false)
+//                self.dismiss(animated: true, completion: nil)
                 
             })
 

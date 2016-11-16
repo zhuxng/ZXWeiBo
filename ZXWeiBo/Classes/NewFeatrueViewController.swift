@@ -96,6 +96,9 @@ class ZXNewFeatrueCell: UICollectionViewCell {
     }
     func startBtnClicked() {
         
+        // 跳转到首页
+          NotificationCenter.default.post(name: NSNotification.Name(rawValue: ZXSwitchRootViewController), object: true)
+  
     }
     private lazy var iconImage = UIImageView()
     private lazy var startBtn: UIButton = {
