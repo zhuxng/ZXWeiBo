@@ -18,6 +18,9 @@ class User: NSObject {
     var profile_image_url: String?
     ///用户认证类型
     var verified_type = 0
+    ///会员等级  取值范围1~6
+    var mbrank: Int = -1
+    
     
 
     //MARK: - 生命周期
@@ -33,7 +36,7 @@ class User: NSObject {
     
     override var description: String{
         //将模型转换成字典
-        let property = ["idstr","screen_name","profile_image_url","verified_type"]
+        let property = ["idstr","screen_name","profile_image_url","verified_type","mbrank"]
         
         // 将字典转换成字符串
         let dict = dictionaryWithValues(forKeys: property)

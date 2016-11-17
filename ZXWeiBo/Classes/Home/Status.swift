@@ -17,10 +17,8 @@ class Status: NSObject {
     var text: String?
     ///微博来源
     var source: String?
-    
     ///用户信息
     var user: User?
-   
     
     init(dict: [String: AnyObject]) {
         super.init()
@@ -43,7 +41,6 @@ class Status: NSObject {
         let property = ["created_at","idstr","source","text"]
         let dict = dictionaryWithValues(forKeys: property)
         return "\(dict)"
-        
-        
     }
+    
 }

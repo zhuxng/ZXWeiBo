@@ -27,34 +27,34 @@ class HomeTableViewCell: UITableViewCell {
 
     
     /// 模型数据
-    var status: Status?
+    var viewModel: StatusViewModel?
         {
         didSet{
             // 1.设置头像
-            if let urlStr = status?.user?.profile_image_url
-            {
-                let url = NSURL(string: urlStr)
-                iconImageView.sd_setImage(with: url as URL!)
-            }
-            // 2.设置认证图标
-            
-            // 3.设置昵称
-            nameLabel.text = status?.user?.screen_name
-            
-            // 4.设置会员图标
-            
-            // 5.设置时间
-            timeLabel.text = status?.created_at
-            
-            // 6.设置来源
-            sourceLabel.text = status?.source
-            
-            // 7.设置正文
-            contentLabel.text = status?.text
+            iconImageView.sd_setImage(with: viewModel?.icon_URL as URL!)
             iconImageView.layer.cornerRadius = 25
             
+            // 2.设置认证图标
+            verifiedImageView.image = viewModel?.verified_image
+            // 3.设置昵称
+            nameLabel.text = viewModel?.status.user?.screen_name
+            
+            // 4.设置会员图标
+            vipImageView.image = nil
+            nameLabel.textColor = UIColor.black
+            if let image = viewModel?.mbrankImage {
+                vipImageView.image = image
+                nameLabel.textColor = UIColor.orange
+            }
+            // 5.设置时间
+            timeLabel.text = viewModel?.created_Time
+            // 6.设置来源
+            sourceLabel.text = viewModel?.source_Text
+            // 7.设置正文
+            contentLabel.text = viewModel?.status.text
         }
     }
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -65,7 +65,6 @@ class HomeTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

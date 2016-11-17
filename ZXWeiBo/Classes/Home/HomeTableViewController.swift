@@ -13,7 +13,7 @@ class HomeTableViewController: BaseTableViewController {
     
     var isPresent = false
     ///保存所以微博数据
-    var statuses: [Status]? {
+    var statuses: [StatusViewModel]? {
         didSet {
             tableView.reloadData()
         }
@@ -44,6 +44,7 @@ class HomeTableViewController: BaseTableViewController {
         loadData()
     }
     private func loadData() {
+        tableView.rowHeight = 60
         let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "homeCell")
         NetworkTools.shareInstance.loadStatuses { (array, error) in
@@ -51,13 +52,14 @@ class HomeTableViewController: BaseTableViewController {
                 SVProgressHUD.showError(withStatus: "获取数据失败")
             }
             //2、将字典转换成模型数组
-            var models = [Status]()
+            var models = [StatusViewModel]()
             guard let arr = array else {
                 return
             }
             for dict in arr {
                 let status = Status(dict: dict)
-                models.append(status)
+                let viewModel = StatusViewModel(status: status)
+                models.append(viewModel)
             }
             self.statuses = models
         }
@@ -113,11 +115,11 @@ extension HomeTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeTableViewCell
-        cell.status = statuses?[indexPath.row]
+        cell.viewModel = statuses![indexPath.row]
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 300
     }
     
 }
