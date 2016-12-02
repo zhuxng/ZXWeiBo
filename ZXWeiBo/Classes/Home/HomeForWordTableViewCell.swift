@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class HomeTableViewCell: UITableViewCell {
+class HomeForWordTableViewCell: UITableViewCell {
 
     @IBOutlet weak var homeCollectionPicView: UICollectionView! {
         didSet{
@@ -40,6 +40,7 @@ class HomeTableViewCell: UITableViewCell {
     /// 正文
     @IBOutlet weak var contentLabel: UILabel!
 
+    @IBOutlet weak var forwordText: UILabel!
     
     /// 模型数据
     var viewModel: StatusViewModel?
@@ -67,15 +68,19 @@ class HomeTableViewCell: UITableViewCell {
             sourceLabel.text = viewModel?.source_Text
             // 7.设置正文
             contentLabel.text = viewModel?.status.text
-            
+            //8、
             homeCollectionPicView.reloadData()
             let (itemSize, clvSize) = calculateSize()
             if itemSize != CGSize.zero {
                 flowLayout.itemSize = itemSize
             }
+            //9、
             pictureCollectionViewHeightCons.constant = clvSize.height
             pictureCollectionViewWidthCons.constant = clvSize.width
             
+            
+            //10
+            forwordText.text = viewModel?.forWordText
         }
     }
     
@@ -134,7 +139,8 @@ class HomeTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.width - 2*10
+//        contentLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.width - 2*10
+        forwordText.preferredMaxLayoutWidth = UIScreen.main.bounds.width - 2*10
     }
     
     
@@ -146,7 +152,7 @@ class HomeTableViewCell: UITableViewCell {
 }
 
 // MARK: - UICollectionViewDataSource实现数据源方法
-extension HomeTableViewCell: UICollectionViewDataSource {
+extension HomeForWordTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel?.thumbnail_pic?.count ?? 0
     }

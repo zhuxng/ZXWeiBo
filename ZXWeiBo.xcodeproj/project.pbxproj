@@ -31,6 +31,8 @@
 		3971DFF01DDCD0F7004B2FA2 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3971DFEE1DDCD0F7004B2FA2 /* HomeTableViewCell.xib */; };
 		3971DFF21DDDE9E1004B2FA2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3971DFF11DDDE9E1004B2FA2 /* Date+Extension.swift */; };
 		3971DFF61DDDFB0B004B2FA2 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3971DFF51DDDFB0B004B2FA2 /* StatusViewModel.swift */; };
+		3979EE481DF19C4400BD0695 /* HomeForWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3979EE471DF19C4400BD0695 /* HomeForWordTableViewCell.swift */; };
+		3979EE4A1DF19C7800BD0695 /* HomeForWordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3979EE491DF19C7800BD0695 /* HomeForWordTableViewCell.xib */; };
 		39A5182F1DDAB04500EFA2BA /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A5182E1DDAB04500EFA2BA /* Welcome.storyboard */; };
 		39A518361DDACE3E00EFA2BA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A518351DDACE3E00EFA2BA /* WelcomeViewController.swift */; };
 		39A518381DDAD0B600EFA2BA /* NewFeatrueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A518371DDAD0B600EFA2BA /* NewFeatrueViewController.swift */; };
@@ -101,6 +103,8 @@
 		3971DFEE1DDCD0F7004B2FA2 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		3971DFF11DDDE9E1004B2FA2 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		3971DFF51DDDFB0B004B2FA2 /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		3979EE471DF19C4400BD0695 /* HomeForWordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeForWordTableViewCell.swift; sourceTree = "<group>"; };
+		3979EE491DF19C7800BD0695 /* HomeForWordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeForWordTableViewCell.xib; sourceTree = "<group>"; };
 		39A5182E1DDAB04500EFA2BA /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		39A518351DDACE3E00EFA2BA /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		39A518371DDAD0B600EFA2BA /* NewFeatrueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatrueViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				391499941DC9A74E00E8E22A /* HomeTableViewController.swift */,
 				3971DFED1DDCD0F7004B2FA2 /* HomeTableViewCell.swift */,
 				3971DFEE1DDCD0F7004B2FA2 /* HomeTableViewCell.xib */,
+				3979EE471DF19C4400BD0695 /* HomeForWordTableViewCell.swift */,
+				3979EE491DF19C7800BD0695 /* HomeForWordTableViewCell.xib */,
 				3950CF241DE83C8800B5AB02 /* HomePicCell.swift */,
 				3950CF251DE83C8800B5AB02 /* HomePicCell.xib */,
 				39FDB0931DCB377300BD11D4 /* ZXPresentationController.swift */,
@@ -528,6 +534,7 @@
 				39FDB0921DCB31CA00BD11D4 /* Popover.storyboard in Resources */,
 				39A5182F1DDAB04500EFA2BA /* Welcome.storyboard in Resources */,
 				3950CF271DE83C8800B5AB02 /* HomePicCell.xib in Resources */,
+				3979EE4A1DF19C7800BD0695 /* HomeForWordTableViewCell.xib in Resources */,
 				396CB08F1DD256FF0056DC36 /* QRCode.storyboard in Resources */,
 				3971DFF01DDCD0F7004B2FA2 /* HomeTableViewCell.xib in Resources */,
 				391499A31DC9BECF00E8E22A /* MainVCSettings.json in Resources */,
@@ -731,6 +738,7 @@
 				3926811F1DD75F7A00D9ABB8 /* Common.swift in Sources */,
 				391499A61DC9E54500E8E22A /* UIButton + Extension.swift in Sources */,
 				392681231DD7766500D9ABB8 /* String + Extrnsion.swift in Sources */,
+				3979EE481DF19C4400BD0695 /* HomeForWordTableViewCell.swift in Sources */,
 				39B27D2A1DCA467B00F56141 /* VistorView.swift in Sources */,
 				391499A41DC9BECF00E8E22A /* NullViewController.swift in Sources */,
 				391499991DC9A77800E8E22A /* ComposeTableViewController.swift in Sources */,

@@ -50,9 +50,7 @@ class HomeTableViewController: BaseTableViewController {
   
     
     private func loadData() {
-        
-        let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "homeCell")
+       
         NetworkTools.shareInstance.loadStatuses { (array, error) in
             if error != nil {
                 SVProgressHUD.showError(withStatus: "获取数据失败")
@@ -99,6 +97,7 @@ class HomeTableViewController: BaseTableViewController {
        group.notify(queue: myQueue) {
         self.statuses = viewModels
         }
+        tableView.reloadData()
     }
     
     // MARK: - 内部控制
@@ -144,22 +143,48 @@ extension HomeTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let viewModel = statuses![indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeTableViewCell
-        cell.viewModel = statuses![indexPath.row]
-        return cell
+        if (viewModel.status.retweeted_status != nil) {
+            let nib = UINib(nibName: "HomeForWordTableViewCell", bundle: nil)
+            tableView.register(nib, forCellReuseIdentifier: "forwordCell")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "forwordCell") as! HomeForWordTableViewCell
+            cell.viewModel = viewModel
+            return cell
+        }else{
+            let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
+            tableView.register(nib, forCellReuseIdentifier: "homeCell")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeTableViewCell
+            cell.viewModel = viewModel
+            return cell
+        }
+        
+        
+        
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         let viewModel = statuses![indexPath.row]
+        if (viewModel.status.retweeted_status != nil) {
         guard let height = rowHeightCaches[viewModel.status.idstr!] else {
-           let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeTableViewCell
+           let cell = tableView.dequeueReusableCell(withIdentifier: "forwordCell") as! HomeForWordTableViewCell
             let temp = cell.calculetRowHeight(viewModel: viewModel)
             rowHeightCaches[viewModel.status.idstr!] = temp
 
             return temp
         }
         return height
+        }
+        else {
+            guard let height = rowHeightCaches[viewModel.status.idstr!] else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeTableViewCell
+                let temp = cell.calculetRowHeight(viewModel: viewModel)
+                rowHeightCaches[viewModel.status.idstr!] = temp
+                
+                return temp
+            }
+            return height
+        }
     }
     
 }

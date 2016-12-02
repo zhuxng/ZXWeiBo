@@ -40,6 +40,9 @@ class StatusViewModel: NSObject {
     /// 模型对象
     var status: Status
     
+    /// 转发正文
+    var forWordText:String?
+    
     init(status: Status)
     {
         self.status = status
@@ -92,7 +95,9 @@ class StatusViewModel: NSObject {
         }
         
         //处理配图的URL
-        if let picurls = status.pic_urls
+//        if let picurls = status.pic_urls
+
+        if let picurls = (status.retweeted_status != nil) ? status.retweeted_status?.pic_urls : status.pic_urls
         {
             thumbnail_pic = [URL]()
             for dict in picurls {
@@ -105,6 +110,11 @@ class StatusViewModel: NSObject {
                 let url = NSURL(string: urlStr)!
                 thumbnail_pic?.append(url as URL)
             }
+        }
+        //处理转发
+        if let text = status.retweeted_status?.text {
+            let name = status.retweeted_status?.user?.screen_name ?? ""
+            forWordText = "@" + name + ":" + text
         }
     }
     
