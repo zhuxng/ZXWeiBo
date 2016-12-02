@@ -19,9 +19,12 @@
 		39195C131DD465C100C3FA7D /* MyBusinessCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39195C121DD465C100C3FA7D /* MyBusinessCardViewController.swift */; };
 		3926811F1DD75F7A00D9ABB8 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926811E1DD75F7A00D9ABB8 /* Common.swift */; };
 		392681231DD7766500D9ABB8 /* String + Extrnsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392681221DD7766500D9ABB8 /* String + Extrnsion.swift */; };
+		3950CF261DE83C8800B5AB02 /* HomePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3950CF241DE83C8800B5AB02 /* HomePicCell.swift */; };
+		3950CF271DE83C8800B5AB02 /* HomePicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3950CF251DE83C8800B5AB02 /* HomePicCell.xib */; };
 		396CB08C1DD248AF0056DC36 /* ZXPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396CB08B1DD248AF0056DC36 /* ZXPresentationManager.swift */; };
 		396CB08F1DD256FF0056DC36 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 396CB08E1DD256FF0056DC36 /* QRCode.storyboard */; };
 		396CB0911DD25BC90056DC36 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396CB0901DD25BC90056DC36 /* QRCodeViewController.swift */; };
+		3971584A1DE357E000CF7196 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397158491DE357E000CF7196 /* SweetAlert.swift */; };
 		3971DFE91DDCBB8A004B2FA2 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3971DFE81DDCBB8A004B2FA2 /* Status.swift */; };
 		3971DFEC1DDCC804004B2FA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3971DFEB1DDCC804004B2FA2 /* User.swift */; };
 		3971DFEF1DDCD0F7004B2FA2 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3971DFED1DDCD0F7004B2FA2 /* HomeTableViewCell.swift */; };
@@ -32,6 +35,7 @@
 		39A518361DDACE3E00EFA2BA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A518351DDACE3E00EFA2BA /* WelcomeViewController.swift */; };
 		39A518381DDAD0B600EFA2BA /* NewFeatrueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A518371DDAD0B600EFA2BA /* NewFeatrueViewController.swift */; };
 		39A5183A1DDAD0BF00EFA2BA /* NewFeatrue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A518391DDAD0BF00EFA2BA /* NewFeatrue.storyboard */; };
+		39ADB04E1DDE18EB00C927E1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ADB04D1DDE18EB00C927E1 /* R.generated.swift */; };
 		39B27D281DCA424600F56141 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B27D271DCA424600F56141 /* BaseTableViewController.swift */; };
 		39B27D2A1DCA467B00F56141 /* VistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B27D291DCA467B00F56141 /* VistorView.swift */; };
 		39B27D2C1DCA468900F56141 /* VistorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39B27D2B1DCA468900F56141 /* VistorView.xib */; };
@@ -85,9 +89,12 @@
 		39195C121DD465C100C3FA7D /* MyBusinessCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBusinessCardViewController.swift; sourceTree = "<group>"; };
 		3926811E1DD75F7A00D9ABB8 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = ../Common.swift; sourceTree = "<group>"; };
 		392681221DD7766500D9ABB8 /* String + Extrnsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Extrnsion.swift"; sourceTree = "<group>"; };
+		3950CF241DE83C8800B5AB02 /* HomePicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePicCell.swift; sourceTree = "<group>"; };
+		3950CF251DE83C8800B5AB02 /* HomePicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePicCell.xib; sourceTree = "<group>"; };
 		396CB08B1DD248AF0056DC36 /* ZXPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXPresentationManager.swift; sourceTree = "<group>"; };
 		396CB08E1DD256FF0056DC36 /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		396CB0901DD25BC90056DC36 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		397158491DE357E000CF7196 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		3971DFE81DDCBB8A004B2FA2 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		3971DFEB1DDCC804004B2FA2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3971DFED1DDCD0F7004B2FA2 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +105,7 @@
 		39A518351DDACE3E00EFA2BA /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		39A518371DDAD0B600EFA2BA /* NewFeatrueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatrueViewController.swift; sourceTree = "<group>"; };
 		39A518391DDAD0BF00EFA2BA /* NewFeatrue.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewFeatrue.storyboard; sourceTree = "<group>"; };
+		39ADB04D1DDE18EB00C927E1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = ZXWeiBo/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		39B27D271DCA424600F56141 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		39B27D291DCA467B00F56141 /* VistorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistorView.swift; sourceTree = "<group>"; };
 		39B27D2B1DCA468900F56141 /* VistorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VistorView.xib; sourceTree = "<group>"; };
@@ -231,6 +239,8 @@
 		391499931DC9A72D00E8E22A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				397158491DE357E000CF7196 /* SweetAlert.swift */,
+				39ADB04D1DDE18EB00C927E1 /* R.generated.swift */,
 				391499A51DC9E54500E8E22A /* UIButton + Extension.swift */,
 				39FDB08D1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift */,
 				39FDB08F1DCACF2900BD11D4 /* TitleButton.swift */,
@@ -276,6 +286,8 @@
 				391499941DC9A74E00E8E22A /* HomeTableViewController.swift */,
 				3971DFED1DDCD0F7004B2FA2 /* HomeTableViewCell.swift */,
 				3971DFEE1DDCD0F7004B2FA2 /* HomeTableViewCell.xib */,
+				3950CF241DE83C8800B5AB02 /* HomePicCell.swift */,
+				3950CF251DE83C8800B5AB02 /* HomePicCell.xib */,
 				39FDB0931DCB377300BD11D4 /* ZXPresentationController.swift */,
 				396CB08B1DD248AF0056DC36 /* ZXPresentationManager.swift */,
 				39FDB0911DCB31CA00BD11D4 /* Popover.storyboard */,
@@ -400,6 +412,7 @@
 				39B37D9C1DC8B98000202E2A /* Resources */,
 				8D292EB02680002C49A801C1 /* [CP] Embed Pods Frameworks */,
 				3ABA38359A1509511F9900FB /* [CP] Copy Pods Resources */,
+				39ADB04C1DDE18CA00C927E1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -514,6 +527,7 @@
 				39B37DA91DC8B98000202E2A /* Assets.xcassets in Resources */,
 				39FDB0921DCB31CA00BD11D4 /* Popover.storyboard in Resources */,
 				39A5182F1DDAB04500EFA2BA /* Welcome.storyboard in Resources */,
+				3950CF271DE83C8800B5AB02 /* HomePicCell.xib in Resources */,
 				396CB08F1DD256FF0056DC36 /* QRCode.storyboard in Resources */,
 				3971DFF01DDCD0F7004B2FA2 /* HomeTableViewCell.xib in Resources */,
 				391499A31DC9BECF00E8E22A /* MainVCSettings.json in Resources */,
@@ -581,6 +595,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXWeiBoTests/Pods-ZXWeiBoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		39ADB04C1DDE18CA00C927E1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/ZXWeiBo\"";
 		};
 		3ABA38359A1509511F9900FB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -684,6 +711,7 @@
 				3971DFE91DDCBB8A004B2FA2 /* Status.swift in Sources */,
 				391499951DC9A74E00E8E22A /* HomeTableViewController.swift in Sources */,
 				3971DFF61DDDFB0B004B2FA2 /* StatusViewModel.swift in Sources */,
+				3971584A1DE357E000CF7196 /* SweetAlert.swift in Sources */,
 				39195C131DD465C100C3FA7D /* MyBusinessCardViewController.swift in Sources */,
 				396CB0911DD25BC90056DC36 /* QRCodeViewController.swift in Sources */,
 				39F1D5D41DD704E0007DD291 /* UserAccount.swift in Sources */,
@@ -695,7 +723,9 @@
 				391499971DC9A76C00E8E22A /* DiscoverTableViewController.swift in Sources */,
 				3914999B1DC9A78B00E8E22A /* MessageTableViewController.swift in Sources */,
 				39FDB08E1DCAC95E00BD11D4 /* UIBarButtonItem + Extension.swift in Sources */,
+				3950CF261DE83C8800B5AB02 /* HomePicCell.swift in Sources */,
 				3971DFEF1DDCD0F7004B2FA2 /* HomeTableViewCell.swift in Sources */,
+				39ADB04E1DDE18EB00C927E1 /* R.generated.swift in Sources */,
 				39DD36FC1DD4BA840014241D /* OAuthViewController.swift in Sources */,
 				39A518381DDAD0B600EFA2BA /* NewFeatrueViewController.swift in Sources */,
 				3926811F1DD75F7A00D9ABB8 /* Common.swift in Sources */,

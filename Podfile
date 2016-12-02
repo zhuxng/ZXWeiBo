@@ -12,7 +12,7 @@ pod 'AFNetworking'
 pod 'SVProgressHUD'
 pod 'SDWebImage'
 pod 'SnapKit'
-
+pod 'R.swift'
 
 
   # Pods for ZXWeiBo

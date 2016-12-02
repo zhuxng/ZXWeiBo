@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import SDWebImage
 
 class HomeTableViewController: BaseTableViewController {
     
@@ -29,7 +30,7 @@ class HomeTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //判断是否登录
+      //判断是否登录
         if !isLogin {
             visitorView.setupVisitorInfo(imageName: nil, title: "关注一些人。回这里看有什么惊喜")
             return
@@ -40,11 +41,16 @@ class HomeTableViewController: BaseTableViewController {
         //3注册通知
         NotificationCenter.default.addObserver(self, selector: #selector(HomeTableViewController.titleChanged), name: NSNotification.Name(rawValue: ZXPresentationManagerDIdPresented), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(HomeTableViewController.titleChanged), name: NSNotification.Name(rawValue: ZXPresentationManagerDIddismissed), object: nil)
+        
+        
         // 4、获取微博数据
         loadData()
+        tableView.estimatedRowHeight = 400
     }
+  
+    
     private func loadData() {
-        tableView.rowHeight = 60
+        
         let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "homeCell")
         NetworkTools.shareInstance.loadStatuses { (array, error) in
@@ -61,7 +67,9 @@ class HomeTableViewController: BaseTableViewController {
                 let viewModel = StatusViewModel(status: status)
                 models.append(viewModel)
             }
-            self.statuses = models
+//            self.statuses = models
+            //4、缓存所有的配图
+            self.cachesImages(viewModels: models)
         }
     }
     deinit {
@@ -72,6 +80,27 @@ class HomeTableViewController: BaseTableViewController {
     @objc private func titleChanged() {
         titleBtn.isSelected = !titleBtn.isSelected
     }
+    
+    // MARK: - 图片缓存
+    private func cachesImages(viewModels: [StatusViewModel]) {
+        let myQueue = DispatchQueue(label: "第一条线程")
+        let group = DispatchGroup.init()
+        for viewModel in viewModels {
+        let picurls = viewModel.thumbnail_pic!
+            for url in picurls {
+                
+                group.enter()
+                SDWebImageManager.shared().downloadImage(with: url as URL!, options: SDWebImageOptions(rawValue: 0), progress: nil, completed: { (image, error, _, _, _) in
+                    
+                    group.leave()
+                })
+            }
+        }
+       group.notify(queue: myQueue) {
+        self.statuses = viewModels
+        }
+    }
+    
     // MARK: - 内部控制
     func setupNav(){
         //MARK: - 添加左右按钮
@@ -104,7 +133,8 @@ class HomeTableViewController: BaseTableViewController {
         present(QRVC, animated: true, completion: nil)
         
     }
-    
+    /// 缓存行高
+    var rowHeightCaches = [String: CGFloat]()
     
 }
 extension HomeTableViewController {
@@ -114,12 +144,22 @@ extension HomeTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeTableViewCell
         cell.viewModel = statuses![indexPath.row]
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        
+        let viewModel = statuses![indexPath.row]
+        guard let height = rowHeightCaches[viewModel.status.idstr!] else {
+           let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeTableViewCell
+            let temp = cell.calculetRowHeight(viewModel: viewModel)
+            rowHeightCaches[viewModel.status.idstr!] = temp
+
+            return temp
+        }
+        return height
     }
     
 }

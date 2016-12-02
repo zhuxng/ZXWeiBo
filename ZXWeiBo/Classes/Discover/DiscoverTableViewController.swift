@@ -17,9 +17,5 @@ class DiscoverTableViewController: BaseTableViewController {
             visitorView.setupVisitorInfo(imageName: "visitordiscover_image_profile", title: "登陆后，最新最热的微薄尽在掌握中......")
             return
         }
-       
     }
-
-   
-
 }

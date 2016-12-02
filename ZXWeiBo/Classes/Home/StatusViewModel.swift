@@ -17,6 +17,26 @@ import UIKit
  2.处理业务逻辑
  */
 class StatusViewModel: NSObject {
+    
+    /// 用户认证图片
+    var verified_image: UIImage?
+    
+    /// 会员图片
+    var mbrankImage: UIImage?
+    
+    /// 用户头像URL地址
+    var icon_URL: NSURL?
+    
+    /// 微博格式化之后的创建时间
+    var created_Time: String = ""
+    
+    /// 微博格式化之后的来源
+    var source_Text: String = ""
+    
+    ///图片的URL数组
+    var thumbnail_pic: [URL]?
+    
+    
     /// 模型对象
     var status: Status
     
@@ -71,21 +91,23 @@ class StatusViewModel: NSObject {
             created_Time = createDate.descriptionStr()
         }
         
+        //处理配图的URL
+        if let picurls = status.pic_urls
+        {
+            thumbnail_pic = [URL]()
+            for dict in picurls {
+                //取出图片的url
+                guard let urlStr = dict["thumbnail_pic"] as? String else
+                {
+                    continue
+                }
+                
+                let url = NSURL(string: urlStr)!
+                thumbnail_pic?.append(url as URL)
+            }
+        }
     }
     
-    /// 用户认证图片
-    var verified_image: UIImage?
     
-    /// 会员图片
-    var mbrankImage: UIImage?
-    
-    /// 用户头像URL地址
-    var icon_URL: NSURL?
-    
-    /// 微博格式化之后的创建时间
-    var created_Time: String = ""
-    
-    /// 微博格式化之后的来源
-    var source_Text: String = ""
 }
 

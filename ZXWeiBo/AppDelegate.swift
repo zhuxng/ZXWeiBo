@@ -1,4 +1,3 @@
- //
 //  AppDelegate.swift
 //  ZXWeiBo
 //
@@ -7,6 +6,7 @@
 //
 
 import UIKit
+import Rswift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -48,8 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserAccount.isLogin() {
             //2、判断是否有新版
             if isNewVersion() {
-                let sb = UIStoryboard(name: "NewFeatrue", bundle: nil)
-                return sb.instantiateInitialViewController()!
+                
+                return R.storyboard.newFeatrue().instantiateInitialViewController()!
             }else {
                 let sb = UIStoryboard(name: "Welcome", bundle: nil)
                 return sb.instantiateInitialViewController()!
