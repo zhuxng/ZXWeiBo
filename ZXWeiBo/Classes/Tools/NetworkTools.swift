@@ -20,12 +20,12 @@ class NetworkTools: AFHTTPSessionManager {
     }()
     //MARK: - 外部控制方法
     //finished: (array: [String: AnyObject]?, error: Error?)->()回调
-    func loadStatuses(finished: @escaping (_ array: [[String: AnyObject]]?, _ error: Error?)->())  {
+    func loadStatuses(since_id: String, max_id: String, finished: @escaping (_ array: [[String: AnyObject]]?, _ error: Error?)->())  {
         assert(UserAccount.loadUserAccount()?.access_token != nil, "先授权再发送数据请求")
         //准备路径
         let path = "2/statuses/home_timeline.json"
         //2、准备参数
-        let parameters = ["access_token":"2.00LQqZWBxR529B3f8390f72aNPJZ8D"]
+        let parameters = ["access_token":UserAccount.loadUserAccount()?.access_token!, "since_id": since_id, "max_id": max_id]
         
         //3、发起请求
         get(path, parameters: parameters, progress: nil, success: { (task, objc) in

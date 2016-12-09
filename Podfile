@@ -7,13 +7,14 @@ target 'ZXWeiBo' do
 
 pod 'QorumLogs'
 
+pod 'YYKit'
 pod 'AFNetworking'
 
 pod 'SVProgressHUD'
 pod 'SDWebImage'
 pod 'SnapKit'
 pod 'R.swift'
-
+pod 'ZYCornerRadius'
 
   # Pods for ZXWeiBo
 

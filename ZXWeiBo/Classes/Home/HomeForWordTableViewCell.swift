@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import ZYCornerRadius
 
 class HomeForWordTableViewCell: UITableViewCell {
 
@@ -48,7 +49,8 @@ class HomeForWordTableViewCell: UITableViewCell {
         didSet{
             // 1.设置头像
             iconImageView.sd_setImage(with: viewModel?.icon_URL as URL!)
-            iconImageView.layer.cornerRadius = 25
+            //切圆角
+            iconImageView.zy_cornerRadiusAdvance(25, rectCornerType: .allCorners)
             
             // 2.设置认证图标
             verifiedImageView.image = viewModel?.verified_image

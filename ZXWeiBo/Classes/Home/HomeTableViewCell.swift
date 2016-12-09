@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import ZYCornerRadius
 
 class HomeTableViewCell: UITableViewCell {
 
@@ -47,8 +48,8 @@ class HomeTableViewCell: UITableViewCell {
         didSet{
             // 1.设置头像
             iconImageView.sd_setImage(with: viewModel?.icon_URL as URL!)
-            iconImageView.layer.cornerRadius = 25
-            
+            //切圆角
+            iconImageView.zy_cornerRadiusAdvance(25, rectCornerType: .allCorners)
             // 2.设置认证图标
             verifiedImageView.image = viewModel?.verified_image
             // 3.设置昵称
@@ -100,9 +101,11 @@ class HomeTableViewCell: UITableViewCell {
         if count == 1 {
             let key = viewModel?.thumbnail_pic?.first!.absoluteString
             // 从缓存中获取已经下载好的图片
-            let image = SDWebImageManager.shared().imageCache.imageFromDiskCache(forKey: key)
-            return ((image!.size),(image!.size))
-            
+            if let image = SDWebImageManager.shared().imageCache.imageFromDiskCache(forKey: key)
+               {
+                    
+                return ((image.size),(image.size))
+            }   
         }
         
         //4张配图

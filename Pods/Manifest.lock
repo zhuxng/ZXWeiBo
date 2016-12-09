@@ -23,6 +23,10 @@ PODS:
   - SDWebImage/Core (3.8.2)
   - SnapKit (3.0.2)
   - SVProgressHUD (2.0.3)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+  - ZYCornerRadius (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -31,6 +35,8 @@ DEPENDENCIES:
   - SDWebImage
   - SnapKit
   - SVProgressHUD
+  - YYKit
+  - ZYCornerRadius
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -40,7 +46,9 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: ad07d36b919c5b402af5c8c88ff29df580f07469
+PODFILE CHECKSUM: 9d263c4bd41743e1732bccd31941442749dad552
 
 COCOAPODS: 1.1.1

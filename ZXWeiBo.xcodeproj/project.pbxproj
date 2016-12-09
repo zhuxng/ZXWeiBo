@@ -19,6 +19,9 @@
 		39195C131DD465C100C3FA7D /* MyBusinessCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39195C121DD465C100C3FA7D /* MyBusinessCardViewController.swift */; };
 		3926811F1DD75F7A00D9ABB8 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926811E1DD75F7A00D9ABB8 /* Common.swift */; };
 		392681231DD7766500D9ABB8 /* String + Extrnsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392681221DD7766500D9ABB8 /* String + Extrnsion.swift */; };
+		393671DB1DFA757E002064D7 /* StatusListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393671DA1DFA757E002064D7 /* StatusListModel.swift */; };
+		394CA3031DF286B600443DED /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394CA3021DF286B600443DED /* Refresh.swift */; };
+		394CA3051DF286C300443DED /* Refresh.xib in Resources */ = {isa = PBXBuildFile; fileRef = 394CA3041DF286C300443DED /* Refresh.xib */; };
 		3950CF261DE83C8800B5AB02 /* HomePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3950CF241DE83C8800B5AB02 /* HomePicCell.swift */; };
 		3950CF271DE83C8800B5AB02 /* HomePicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3950CF251DE83C8800B5AB02 /* HomePicCell.xib */; };
 		396CB08C1DD248AF0056DC36 /* ZXPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396CB08B1DD248AF0056DC36 /* ZXPresentationManager.swift */; };
@@ -91,6 +94,9 @@
 		39195C121DD465C100C3FA7D /* MyBusinessCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBusinessCardViewController.swift; sourceTree = "<group>"; };
 		3926811E1DD75F7A00D9ABB8 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = ../Common.swift; sourceTree = "<group>"; };
 		392681221DD7766500D9ABB8 /* String + Extrnsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Extrnsion.swift"; sourceTree = "<group>"; };
+		393671DA1DFA757E002064D7 /* StatusListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusListModel.swift; sourceTree = "<group>"; };
+		394CA3021DF286B600443DED /* Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
+		394CA3041DF286C300443DED /* Refresh.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Refresh.xib; sourceTree = "<group>"; };
 		3950CF241DE83C8800B5AB02 /* HomePicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePicCell.swift; sourceTree = "<group>"; };
 		3950CF251DE83C8800B5AB02 /* HomePicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePicCell.xib; sourceTree = "<group>"; };
 		396CB08B1DD248AF0056DC36 /* ZXPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXPresentationManager.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 		3914998F1DC9A72D00E8E22A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				394CA3011DF2868F00443DED /* Refresh */,
 				396CB08D1DD256D90056DC36 /* QRCode */,
 				3971DFF31DDDFABC004B2FA2 /* home */,
 				3971DFEA1DDCC7CF004B2FA2 /* Model */,
@@ -265,6 +272,15 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		394CA3011DF2868F00443DED /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				394CA3021DF286B600443DED /* Refresh.swift */,
+				394CA3041DF286C300443DED /* Refresh.xib */,
+			);
+			name = Refresh;
+			sourceTree = "<group>";
+		};
 		396CB08D1DD256D90056DC36 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				391499941DC9A74E00E8E22A /* HomeTableViewController.swift */,
+				393671DA1DFA757E002064D7 /* StatusListModel.swift */,
 				3971DFED1DDCD0F7004B2FA2 /* HomeTableViewCell.swift */,
 				3971DFEE1DDCD0F7004B2FA2 /* HomeTableViewCell.xib */,
 				3979EE471DF19C4400BD0695 /* HomeForWordTableViewCell.swift */,
@@ -531,6 +548,7 @@
 				39DD36FE1DD4BA900014241D /* OAuth.storyboard in Resources */,
 				39B27D2C1DCA468900F56141 /* VistorView.xib in Resources */,
 				39B37DA91DC8B98000202E2A /* Assets.xcassets in Resources */,
+				394CA3051DF286C300443DED /* Refresh.xib in Resources */,
 				39FDB0921DCB31CA00BD11D4 /* Popover.storyboard in Resources */,
 				39A5182F1DDAB04500EFA2BA /* Welcome.storyboard in Resources */,
 				3950CF271DE83C8800B5AB02 /* HomePicCell.xib in Resources */,
@@ -723,6 +741,7 @@
 				396CB0911DD25BC90056DC36 /* QRCodeViewController.swift in Sources */,
 				39F1D5D41DD704E0007DD291 /* UserAccount.swift in Sources */,
 				39A518361DDACE3E00EFA2BA /* WelcomeViewController.swift in Sources */,
+				393671DB1DFA757E002064D7 /* StatusListModel.swift in Sources */,
 				396CB08C1DD248AF0056DC36 /* ZXPresentationManager.swift in Sources */,
 				39F1D5D21DD6FCF6007DD291 /* NetworkTools.swift in Sources */,
 				39B27D281DCA424600F56141 /* BaseTableViewController.swift in Sources */,
@@ -734,6 +753,7 @@
 				3971DFEF1DDCD0F7004B2FA2 /* HomeTableViewCell.swift in Sources */,
 				39ADB04E1DDE18EB00C927E1 /* R.generated.swift in Sources */,
 				39DD36FC1DD4BA840014241D /* OAuthViewController.swift in Sources */,
+				394CA3031DF286B600443DED /* Refresh.swift in Sources */,
 				39A518381DDAD0B600EFA2BA /* NewFeatrueViewController.swift in Sources */,
 				3926811F1DD75F7A00D9ABB8 /* Common.swift in Sources */,
 				391499A61DC9E54500E8E22A /* UIButton + Extension.swift in Sources */,

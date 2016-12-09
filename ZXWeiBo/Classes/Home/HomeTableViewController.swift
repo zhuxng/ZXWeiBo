@@ -10,23 +10,35 @@ import UIKit
 import SVProgressHUD
 import SDWebImage
 
+
 class HomeTableViewController: BaseTableViewController {
     
     var isPresent = false
     ///保存所以微博数据
-    var statuses: [StatusViewModel]? {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    
+    var statusListModel = StatusListModel()
+    
+    
     private lazy var animatorManager = ZXPresentationManager()
     private lazy var titleBtn: TitleButton = {
         let btn = TitleButton()
         let title = UserAccount.loadUserAccount()?.screen_name
         btn.setTitle(title, for: .normal)
-        btn.addTarget(self, action: #selector(HomeTableViewController.titleBtnClick), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(titleBtnClick), for: .touchUpInside)
         return btn
     }()
+    //下拉刷新提示文本的懒加载
+    private lazy var tipLabel: UILabel = {
+
+        let lb = UILabel(frame: CGRect(x: 0, y: 0, width: ZXScreenWidth, height: 44))
+        lb.backgroundColor = UIColor.orange
+        lb.textColor = UIColor.white
+        lb.textAlignment = NSTextAlignment.center
+        lb.isHidden = true
+        return lb
+    }()
+    
+     var lastStatus = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,59 +57,66 @@ class HomeTableViewController: BaseTableViewController {
         
         // 4、获取微博数据
         loadData()
+        
         tableView.estimatedRowHeight = 400
-    }
-  
-    
-    private func loadData() {
+        
+        tableView.separatorStyle = .none
+        
+       // 5、自定义下拉刷新
+        refreshControl = ZXrefreshControl()
        
-        NetworkTools.shareInstance.loadStatuses { (array, error) in
-            if error != nil {
-                SVProgressHUD.showError(withStatus: "获取数据失败")
-            }
-            //2、将字典转换成模型数组
-            var models = [StatusViewModel]()
-            guard let arr = array else {
-                return
-            }
-            for dict in arr {
-                let status = Status(dict: dict)
-                let viewModel = StatusViewModel(status: status)
-                models.append(viewModel)
-            }
-//            self.statuses = models
-            //4、缓存所有的配图
-            self.cachesImages(viewModels: models)
-        }
+        refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        
+        refreshControl?.beginRefreshing()
+        
+        // 提示刷新数据多少条
+       navigationController?.navigationBar.insertSubview(tipLabel, at: 1)
+        
     }
     deinit {
         //移除通知
         NotificationCenter.default.removeObserver(self)
     }
     
-    @objc private func titleChanged() {
-        titleBtn.isSelected = !titleBtn.isSelected
+    //MARK: - 数据加载
+    @objc func loadData() {
+        statusListModel.loadData(lastStatus: lastStatus) { (models, error) in
+            //安全校验
+            if error != nil {
+                SVProgressHUD.showError(withStatus: "获取微博数据失败")
+                return
+            }
+            
+            //刷新提醒
+            self.showRefreshStatus(count: models!.count)
+            
+            //刷新表格
+            self.tableView.reloadData()
+            //关闭菊花
+            self.refreshControl?.endRefreshing()
+
+        }
+        
+        
+    }
+    //MARK: - 刷新提醒的动画
+    private func showRefreshStatus(count: Int) {
+        tipLabel.text = (count == 0) ? "没有跟多数据" : "刷新到\(count)条数据"
+        tipLabel.isHidden = false
+        UIView.animate(withDuration: 1, animations: {
+            self.tipLabel.transform = CGAffineTransform(translationX: 0, y: 44)
+        }) { (_) in
+            UIView.animate(withDuration: 1, delay: 1, options: .allowAnimatedContent, animations: {
+                self.tipLabel.transform = CGAffineTransform.identity
+            }, completion: { (_) in
+            self.tipLabel.isHidden = true
+
+            })
+        }
     }
     
-    // MARK: - 图片缓存
-    private func cachesImages(viewModels: [StatusViewModel]) {
-        let myQueue = DispatchQueue(label: "第一条线程")
-        let group = DispatchGroup.init()
-        for viewModel in viewModels {
-        let picurls = viewModel.thumbnail_pic!
-            for url in picurls {
-                
-                group.enter()
-                SDWebImageManager.shared().downloadImage(with: url as URL!, options: SDWebImageOptions(rawValue: 0), progress: nil, completed: { (image, error, _, _, _) in
-                    
-                    group.leave()
-                })
-            }
-        }
-       group.notify(queue: myQueue) {
-        self.statuses = viewModels
-        }
-        tableView.reloadData()
+    @objc private func titleChanged() {
+        titleBtn.isSelected = !titleBtn.isSelected
     }
     
     // MARK: - 内部控制
@@ -139,11 +158,19 @@ class HomeTableViewController: BaseTableViewController {
 extension HomeTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.statuses?.count ?? 0
+        return statusListModel.statuses?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let viewModel = statuses![indexPath.row]
+        let viewModel = statusListModel.statuses![indexPath.row]
+        
+        
+        if indexPath.row == ((statusListModel.statuses?.count)! - 1) {
+            lastStatus = true
+            loadData()
+            
+        }
+        
         
         if (viewModel.status.retweeted_status != nil) {
             let nib = UINib(nibName: "HomeForWordTableViewCell", bundle: nil)
@@ -158,13 +185,10 @@ extension HomeTableViewController {
             cell.viewModel = viewModel
             return cell
         }
-        
-        
-        
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        let viewModel = statuses![indexPath.row]
+        let viewModel = statusListModel.statuses![indexPath.row]
         if (viewModel.status.retweeted_status != nil) {
         guard let height = rowHeightCaches[viewModel.status.idstr!] else {
            let cell = tableView.dequeueReusableCell(withIdentifier: "forwordCell") as! HomeForWordTableViewCell

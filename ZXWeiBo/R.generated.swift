@@ -837,7 +837,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
   struct nib {
     /// Nib `HomeForWordTableViewCell`.
     static let homeForWordTableViewCell = _R.nib._HomeForWordTableViewCell()
@@ -845,6 +845,8 @@ struct R: Rswift.Validatable {
     static let homePicCell = _R.nib._HomePicCell()
     /// Nib `HomeTableViewCell`.
     static let homeTableViewCell = _R.nib._HomeTableViewCell()
+    /// Nib `Refresh`.
+    static let refresh = _R.nib._Refresh()
     /// Nib `VistorView`.
     static let vistorView = _R.nib._VistorView()
     
@@ -861,6 +863,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "HomeTableViewCell", in: bundle)`
     static func homeTableViewCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.homeTableViewCell)
+    }
+    
+    /// `UINib(name: "Refresh", in: bundle)`
+    static func refresh(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.refresh)
     }
     
     /// `UINib(name: "VistorView", in: bundle)`
@@ -965,6 +972,7 @@ struct _R: Rswift.Validatable {
       try _HomeForWordTableViewCell.validate()
       try _VistorView.validate()
       try _HomeTableViewCell.validate()
+      try _Refresh.validate()
     }
     
     struct _HomeForWordTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
@@ -1024,6 +1032,22 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "common_icon_membership_level1") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'common_icon_membership_level1' is used in nib 'HomeTableViewCell', but couldn't be loaded.") }
         if UIKit.UIImage(named: "timeline_icon_comment") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'timeline_icon_comment' is used in nib 'HomeTableViewCell', but couldn't be loaded.") }
         if UIKit.UIImage(named: "timeline_icon_retweet") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'timeline_icon_retweet' is used in nib 'HomeTableViewCell', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _Refresh: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "Refresh"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> Refresh? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? Refresh
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "tableview_loading") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'tableview_loading' is used in nib 'Refresh', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "tableview_pull_refresh") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'tableview_pull_refresh' is used in nib 'Refresh', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
